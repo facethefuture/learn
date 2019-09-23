@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0,user-scalable=no">
+    <link rel="stylesheet" href="../../loading/style.css">
+
+    <title>Learn</title>
+</head>
+<style>
+    .faqBreadcrumb {
+        font-size: 14px;
+        line-height: 24px;
+        padding: 32px 16px;
+        color: #999;
+        background: #fafafa;
+    }
+    .faqBreadcrumb a {
+        /*padding: 8px 0 8px 12px;*/
+        color: #5c6ac4;
+        /*display: block;*/
+        font-size: 14px;
+        line-height: 24px;
+        position: relative;
+        cursor: pointer;
+    }
+
+    .faqLevel3Content {
+        padding: 32px 16px;
+        background-color: #fff;
+    }
+    .faqLevel3Content .faqLevel3ItemTitle {
+        font-size: 16px;
+        line-height: 22px;
+        color: #333;
+    }
+    .faqLevel3Content .faqLevel3ItemText {
+        font-size: 14px;
+        line-height: 24px;
+        color: #666;
+        margin-top: 24px;
+    }
+</style>
+<body>
+<!--<main class="parent">-->
+
+
+<!--    <ul id="refreshContainer">-->
+
+<!--        <li>111</li>-->
+
+<!--        <li>222</li>-->
+
+<!--        <li>333</li>-->
+
+<!--        <li>444</li>-->
+
+<!--        <li>555</li>-->
+
+<!--        <li>111</li>-->
+
+<!--        <li>222</li>-->
+
+<!--        <li>333</li>-->
+
+<!--        <li>444</li>-->
+
+<!--        <li>555</li>-->
+
+<!--        <li>111</li>-->
+
+<!--        <li>222</li>-->
+
+<!--        <li>333</li>-->
+
+<!--        <li>444</li>-->
+
+<!--        <li>555</li>-->
+
+<!--    </ul>-->
+
+<!--</main>-->
+
+
+<div style="display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 100000;
+    margin: 0;"
+     id="loading">
+    <div id="circle" ></div>
+</div>
+<p class="refreshText"></p>
+
+<div id="afterLoading" style="display: none">
+    <div class="faqBreadcrumb">
+        <a onclick="goBackTwo()">Home</a>
+        <span> &gt; </span>
+        <a onclick="goBackOne()" id="secondTitle"></a>
+        <span> &gt; </span>
+        <span id="question"></span>
+
+    </div>
+    <div class="faqLevel3Content">
+        <div class="faqLevel3ItemTitle">
+            <div class="faqLevel1ItemContent" id="questionTitle"></div>
+        </div>
+        <div class="faqLevel3ItemText">
+                <span style="font-weight: 400;" id="questionAnswer" >
+
+                </span>
+        </div>
+    </div>
+</div>
+<script  type="text/javascript">
+
+    function goBackOne () {
+        // this.$router.go(-1)
+        console.log(1)
+        window.history.back()
+
+    }
+    function goBackTwo () {
+        // this.$router.go(-2)
+        window.history.go(-2)
+    }
+</script>
+<script type="module">
+    import {DATA_JSON} from './data.js'
+    console.log(DATA_JSON)
+    window.onload = function () {
+        document.querySelector('#loading').style.display = 'none'
+        document.querySelector('#afterLoading').style.display = 'block'
+        console.log('ready')
+        console.log(window.location.search.slice(1).split('&'))
+        let params = window.location.search.slice(1).split('&')
+        let page = params[0].split('=')[1]
+        let id = params[1].split('=')[1]
+        // document.querySelector('#secondTitle').innerHTML = window.location.search.slice(1).split('=')[1]
+        judgeWhichPage(page)
+        judgeWhichQuestion(id)
+        refresh()
+
+
+        // let oMeta = document.createElement('meta');
+        // oMeta.content = 'width=device-width, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0, user-scalable=0';
+        // oMeta.name = 'viewport';
+        // document.getElementsByTagName('head')[0].appendChild(oMeta);
+        // document.title = 'terms-conditions'
+    }
+
+
+    function judgeWhichPage (name) {
+        switch (name) {
+            case 'getStart':
+                // this.secondTitle = 'Getting Started'
+                document.querySelector('#secondTitle').innerHTML = 'Getting Started'
+                break
+            case 'findMoreCustomer':
+                // this.secondTitle = 'Find More Customers'
+                document.querySelector('#secondTitle').innerHTML = 'Find More Customers'
+
+                break
+            case 'findProductsToShare':
+                // this.secondTitle = 'Find Products To Share'
+                document.querySelector('#secondTitle').innerHTML = 'Find products to share'
+
+
+                break
+            case 'DiscoverProducts':
+                // this.secondTitle = 'Understand what products can be sold at the easiest'
+                document.querySelector('#secondTitle').innerHTML = 'Discovering products'
+                break
+            case 'SocialMedia':
+                // this.secondTitle = 'Social Media '
+                document.querySelector('#secondTitle').innerHTML = 'Use social media '
+                break
+            case 'manageOrdersDelivery':
+                // this.secondTitle = 'Manage Orders & Delivery'
+
+                document.querySelector('#secondTitle').innerHTML = 'Manage orders and delivery'
+
+                break
+            case 'makePayments':
+                // this.secondTitle = ' Make Payments'
+
+                document.querySelector('#secondTitle').innerHTML = 'Make Payments'
+
+                break
+            case 'returnOrExchange':
+                // this.secondTitle = 'Return or Exchange'
+
+                document.querySelector('#secondTitle').innerHTML = 'Cancellation, Returns and refunds'
+
+                break
+            case 'trackMarginBonus':
+                // this.secondTitle = 'Track Margin & Bonus'
+
+                document.querySelector('#secondTitle').innerHTML = 'Margin'
+
+                break
+            case 'manageAccountsSettings':
+                // this.secondTitle = 'Manage Accounts & Settings'
+                document.querySelector('#secondTitle').innerHTML = 'Manage Accounts & Settings'
+
+                break
+
+        }
+    }
+    function judgeWhichQuestion (id) {
+        // this.question = DATA_JSON[id]
+        console.log(DATA_JSON[id])
+        document.querySelector('#question').innerHTML = DATA_JSON[id]['title']
+        document.querySelector('#questionTitle').innerHTML = DATA_JSON[id]['title']
+        document.querySelector('#questionAnswer').innerHTML = DATA_JSON[id]['answer']
+
+    }
+    function refresh (){
+        //1.获取到列表的dom，刷新显示部分的dom，列表父容器的dom
+
+
+
+        let container = document.querySelector('#afterLoading');
+
+        let refreshText = document.querySelector('.refreshText');
+
+        let parent = document.querySelector('#afterLoading');
+
+
+
+        //2.定义一些需要常用的变量
+
+        let startY = 0;//手指触摸最开始的Y坐标
+
+        let endY = 0;//手指结束触摸时的Y坐标
+
+
+
+        //3.给列表dom监听touchstart事件,得到起始位置的Y坐标
+
+        parent.addEventListener('touchstart',function(e){
+            console.log(e)
+            startY = e.touches[0].pageY;
+            // if(isTop() && (e.touches[0].pageY-startY) > 1000){
+            //     setTimeout(() => {
+            //         document.querySelector('#loading').style.display = 'block'
+            //         document.querySelector('#afterLoading').style.display = 'none'
+            //     },500)
+            // }
+
+
+
+        });
+
+        //4.给列表dom监听touchmove事件，当移动到一定程度需要显示上面的文字
+
+        parent.addEventListener('touchmove',function (e) {
+            console.log(e.touches[0].pageY)
+            endY = e.touches[0].pageY
+            let flag = false
+            if(isTop() && (e.touches[0].pageY-startY) > 1){
+
+                console.log('下拉了');
+
+                // refreshText.style.height = "50px";
+                if (!flag && endY < 300) {
+                    parent.style.transform = `translateY(${endY / 2}px)`;
+
+                    parent.style.transition = "all ease 0.5s";
+                    flag = !flag
+                }
+
+
+                // refreshText.innerHTML = "释放立即刷新...";
+
+            }
+
+        });
+
+        //5.给列表dom监听touchend事件，此时说明用户已经松开了手指，应该进行异步操作了
+
+        parent.addEventListener('touchend',function (e) {
+            // refreshText.style.height = "0px";
+            console.log(e)
+            parent.style.transform = "translateY(0)";
+
+
+            if(isTop() && endY > 200){
+                setTimeout(() => {
+                    document.querySelector('#loading').style.display = 'block'
+                    document.querySelector('#afterLoading').style.display = 'none'
+                },300)
+                // refreshText.innerHTML = "正在刷新...";
+
+                setTimeout(function(){
+
+
+                    console.log('成功刷新');
+                    // window.location.reload()
+                    setTimeout(() => {
+                        document.querySelector('#loading').style.display = 'none'
+                        document.querySelector('#afterLoading').style.display = 'block'
+                    },500)
+
+                },2000)
+
+            }
+
+            return;
+
+        })
+
+        function isTop(){
+
+            var t = document.documentElement.scrollTop||document.body.scrollTop;
+
+            return t === 0 ? true : false;
+
+        }
+    }
+</script>
+</body>
+</html>

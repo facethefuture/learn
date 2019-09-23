@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0,user-scalable=no">
+    <link rel="stylesheet" href="./loading/style.css">
+    <title>Learn</title>
+</head>
+<body>
+<style>
+    .learningAcademyHeader {
+        padding: 16px;
+        position: fixed;
+        background-color: #fff;
+        top: 0;
+        left: 50%;
+        z-index: 2;
+        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+        max-width: 600px;
+        width: 100%;
+    }
+    .learningAcademyHeader .headerText {
+        font-size: 16px;
+        line-height: 1.5;
+        display: inline-block;
+        color: #333;
+    }
+
+    #learningAcademyTabs {
+        position: fixed;
+        top: 56px;
+        left: 50%;
+        display: flex;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+        z-index: 1;
+        cursor: pointer;
+        background-color: #fff;
+        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+        max-width: 600px;
+        width: 100%;
+    }
+    #learningAcademyTabs .learningAcademyTabItem {
+        font-size: 14px;
+        line-height: 16px;
+        color: #999;
+        display: inline-block;
+        padding: 16px;
+        width: 50%;
+        text-align: center;
+    }
+    #learningAcademyTabs .ActiveTabItem {
+        color: #333;
+    }
+
+    #learningAcademyTabs:after {
+        width: 50%;
+        content: "";
+        clear: both;
+        bottom: 0;
+        display: block;
+        background-color: #fe4d9b;
+        height: 2px;
+        position: absolute;
+        transition: left 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+        /*margin: 0 15px;*/
+    }
+
+    .bottom-bar-index-0:after {
+        left: 0%;
+    }
+
+    .bottom-bar-index-1:after {
+        left: 50%;
+    }
+
+    .howToContentList {
+        margin-top: 60px;
+        /*padding-bottom: 10px;*/
+    }
+    .howToContentList .howToContentItem {
+        background-color: #fff;
+        margin-bottom: 16px;
+        padding: 16px;
+        display: block;
+        position: relative;
+        box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.05);
+        text-decoration: none !important;
+        color: #337ab7;
+        cursor: pointer;
+    }
+    .howToContentList .howToContentItem .howToContentImg {
+        position: absolute;
+        top: 16px;
+        left: 16px;
+    }
+    .howToContentList .howToContentItem .howToContentImg img {
+        width: 48px;
+        margin-right: 24px;
+        max-width: 100%;
+        vertical-align: middle;
+        display: inline-block;
+    }
+    .howToContentList .howToContentItem .howToContentBox {
+        display: block;
+        padding-left: 72px;
+    }
+    .howToContentList .howToContentItem .howToContentBox .textEllipsis {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .howToContentList .howToContentItem .howToContentBox .howToContentText {
+        font-size: 14px;
+        line-height: 24px;
+        color: #333;
+    }
+    .howToContentList .howToContentItem .howToContentBox .howToContentSubtext {
+        font-size: 12px;
+        line-height: 1.33;
+        color: #999;
+        margin-top: 4px;
+    }
+    .learningAcademyHeader {
+        padding: 16px;
+        position: fixed;
+        background-color: #fff;
+        top: 0;
+        left: 50%;
+        z-index: 2;
+        transform: translateX(-50%);
+        max-width: 600px;
+        width: 100%;
+    }
+    .learningAcademyHeader .headerText {
+        font-size: 16px;
+        line-height: 1.5;
+        display: inline-block;
+        color: #333;
+    }
+</style>
+<div style="display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 100000;
+    margin: 0;"
+id="loading">
+    <div id="circle" ></div>
+</div>
+
+
+<div id="afterLoading" style="display: none">
+    <div class="learningAcademyHeader">
+        <div class="headerText" style="padding-left: 16px">Learn</div>
+    </div>
+    <div class="howToContentList" >
+        <a class="howToContentItem" onclick="jumpToSecond('getStart')">
+            <div class="howToContentImg">
+                <img src="./image/get-your-first-order.png">
+            </div>
+            <div class="howToContentBox">
+                <div class="howToContentText textEllipsis">
+                    Getting started
+                </div>
+                <div class="howToContentSubtext textEllipsis">Get Your First Order</div>
+            </div>
+        </a>
+<!--        <a class="howToContentItem" onclick="jumpToSecond('findMoreCustomer')">-->
+<!--            <div class="howToContentImg">-->
+<!--                <img src="./image/find-more-customers.png">-->
+<!--            </div>-->
+<!--            <div class="howToContentBox">-->
+<!--                <div class="howToContentText textEllipsis">-->
+<!--                    Discover products-->
+<!--                </div>-->
+<!--                <div class="howToContentSubtext textEllipsis">Learn to sell over social media</div>-->
+<!--            </div>-->
+<!--        </a>-->
+        <a class="howToContentItem" onclick="jumpToSecond('findProductsToShare')">
+            <div class="howToContentImg">
+                <img src="./image/find-products-to-share.png">
+            </div>
+            <div class="howToContentBox">
+                <div class="howToContentText textEllipsis">
+                    Find products to share
+                </div>
+                <div class="howToContentSubtext textEllipsis">Understand what products would sell easily</div>
+            </div>
+        </a>
+        <a class="howToContentItem" onclick="jumpToSecond('DiscoverProducts')">
+            <div class="howToContentImg">
+                <img src="./image/find-more-customers.png">
+            </div>
+            <div class="howToContentBox">
+                <div class="howToContentText textEllipsis">
+                    Discover products
+                </div>
+                <div class="howToContentSubtext textEllipsis">Discover products</div>
+            </div>
+        </a>
+        <a class="howToContentItem" onclick="jumpToSecond('SocialMedia')">
+            <div class="howToContentImg">
+                <img src="./image/social-whatsapp.png">
+            </div>
+            <div class="howToContentBox">
+                <div class="howToContentText textEllipsis">
+                    Use social media
+                </div>
+                <div class="howToContentSubtext textEllipsis">Use social media</div>
+            </div>
+        </a>
+        <a class="howToContentItem" onclick="jumpToSecond('manageOrdersDelivery')">
+            <div class="howToContentImg">
+                <img src="./image/manage-orders-and-delivery.png">
+            </div>
+            <div class="howToContentBox">
+                <div class="howToContentText textEllipsis">
+                    Manage orders and delivery
+                </div>
+                <div class="howToContentSubtext textEllipsis">Everything you need to fulfill orders</div>
+            </div>
+        </a>
+<!--        <a class="howToContentItem" onclick="jumpToSecond('makePayments')">-->
+<!--            <div class="howToContentImg">-->
+<!--                <img src="./image/make-payments.png">-->
+<!--            </div>-->
+<!--            <div class="howToContentBox">-->
+<!--                <div class="howToContentText textEllipsis">-->
+<!--                    Margin-->
+<!--                </div>-->
+<!--                <div class="howToContentSubtext textEllipsis">All about making payments</div>-->
+<!--            </div>-->
+<!--        </a>-->
+        <a class="howToContentItem" onclick="jumpToSecond('trackMarginBonus')">
+            <div class="howToContentImg">
+                <img src="./image/track-margin-and-bonus.png">
+            </div>
+            <div class="howToContentBox">
+                <div class="howToContentText textEllipsis">
+                    Margin
+                </div>
+                <div class="howToContentSubtext textEllipsis">Margin and Bonus</div>
+            </div>
+        </a>
+        <a class="howToContentItem" onclick="jumpToSecond('returnOrExchange')">
+            <div class="howToContentImg">
+                <img src="./image/return-or-exchange.png">
+            </div>
+            <div class="howToContentBox">
+                <div class="howToContentText textEllipsis">
+                    Cancellation, Returns and refunds
+                </div>
+                <div class="howToContentSubtext textEllipsis">Cancellation, Returns and refunds</div>
+            </div>
+        </a>
+
+
+        <a class="howToContentItem" onclick="jumpToSecond('manageAccountsSettings')">
+            <div class="howToContentImg">
+                <img src="./image/manage-accounts-and-settings.png">
+            </div>
+            <div class="howToContentBox">
+                <div class="howToContentText textEllipsis">
+                    Manage Accounts & Settings
+                </div>
+                <div class="howToContentSubtext textEllipsis">Manage Accounts & Settings</div>
+            </div>
+        </a>
+
+    </div>
+</div>
+<script>
+    window.onload = function () {
+        document.querySelector('#loading').style.display = 'none'
+        document.querySelector('#afterLoading').style.display = 'block'
+    }
+    function jumpToSecond(page) {
+        console.log(page)
+        console.log(window.location)
+        window.location.href = `${window.location.origin}${window.location.pathname}list/index.html?page=${page}`
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0,user-scalable=no">
+    <link rel="stylesheet" href="../loading/style.css">
+
+    <title>Learn</title>
+</head>
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+    }
+    .faqBreadcrumb {
+        font-size: 14px;
+        line-height: 24px;
+        padding: 32px 16px;
+        color: #999;
+        background: #fafafa;
+    }
+    .faqBreadcrumb a {
+        padding: 8px 0 8px 12px;
+        color: #5c6ac4;
+        /*display: block;*/
+        font-size: 14px;
+        line-height: 24px;
+        position: relative;
+        cursor: pointer;
+    }
+
+    .faqLevel2Content {
+        background: #fff;
+        padding: 0 16px;
+    }
+    .faqLevel2Content .faqLevel2Item {
+        padding: 32px 0;
+        border-bottom: 1px solid #f2f2f2;
+    }
+    .faqLevel2Content .faqLevel2Item .faqLevel2ItemTitle {
+        font-size: 16px;
+        line-height: 22px;
+        color: #333;
+    }
+    .faqLevel2Content .faqLevel2Item .faqLevel2ItemList {
+        margin-top: 16px;
+    }
+    .faqLevel2Content .faqLevel2Item .faqLevel2ItemList .faqLevel2ItemContent {
+        padding: 8px 0 8px 12px;
+        color: #5c6ac4;
+        display: block;
+        font-size: 14px;
+        line-height: 24px;
+        position: relative;
+        cursor: pointer;
+    }
+    .faqLevel2Content .faqLevel2Item .faqLevel2ItemList .faqLevel2ItemContent:before {
+        content: "";
+        height: 3px;
+        width: 3px;
+        background-color: #ccc;
+        display: inline-block;
+        border-radius: 3px;
+        position: absolute;
+        left: 0;
+        top: 18px;
+    }
+</style>
+<body>
+<div style="display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 100000;
+    margin: 0;"
+     id="loading">
+    <div id="circle" ></div>
+</div>
+<div id="afterLoading" style="display: none">
+
+    <div class="faqBreadcrumb" >
+        <a onclick="goBack()">Home</a>
+        <span> &gt; </span>
+        <span id="secondTitle"></span>
+
+    </div>
+    <div class="faqLevel2Content" >
+<!--        <div class="faqLevel2Item"  v-for="(item,index) in list">-->
+<!--            <div class="faqLevel2ItemTitle">{{item.title}}</div>-->
+<!--            <div class="faqLevel2ItemList">-->
+<!--                <a class="faqLevel2ItemContent" v-for="(aItem,aIndex) in item.aList" @click="jumpToDetail(aItem.value)">{{aItem.label}} </a>-->
+<!--                &lt;!&ndash;                    <a class="faqLevel2ItemContent">What is Wemore? </a>&ndash;&gt;-->
+<!--                &lt;!&ndash;                    <a class="faqLevel2ItemContent">How will I get my first order?</a>&ndash;&gt;-->
+<!--                &lt;!&ndash;                    <a class="faqLevel2ItemContent">How do i earn with Wemore?</a>&ndash;&gt;-->
+<!--                &lt;!&ndash;                    <a class="faqLevel2ItemContent">What about quality of products?</a>&ndash;&gt;-->
+<!--                &lt;!&ndash;                    <a class="faqLevel2ItemContent">What is Reselling with Wemore?</a>&ndash;&gt;-->
+
+
+
+
+
+
+<!--            </div>-->
+<!--        </div>-->
+
+
+
+
+
+        <!--            <div class="faqLevel2Item">-->
+        <!--                <div class="faqLevel2ItemTitle">Share Products</div>-->
+        <!--                <div class="faqLevel2ItemList">-->
+        <!--                    <a class="faqLevel2ItemContent">Do I have to check the availability of the the stock before sharing the product?</a>-->
+        <!--                    <a class="faqLevel2ItemContent">How to find out what to share? </a>-->
+        <!--                    <a class="faqLevel2ItemContent">How do I share products on Whatsapp?</a>-->
+        <!--                    <a class="faqLevel2ItemContent">How do I become better at sales?</a>-->
+        <!--                    <a class="faqLevel2ItemContent">Why is it important to share?</a>-->
+        <!--                    <a class="faqLevel2ItemContent">How do I share products on Facebook?</a>-->
+        <!--                </div>-->
+        <!--            </div>-->
+        <!--            <div class="faqLevel2Item">-->
+        <!--                <div class="faqLevel2ItemTitle">Place An Order</div>-->
+        <!--                <div class="faqLevel2ItemList">-->
+        <!--                    <a class="faqLevel2ItemContent">How do I place an order using COD?</a>-->
+        <!--                    <a class="faqLevel2ItemContent">Will Wemore share it’s name, link or product’s price in the message when I share a catalog with the customer? </a>-->
+        <!--                    <a class="faqLevel2ItemContent">How do I place an order?</a>-->
+        <!--                    <a class="faqLevel2ItemContent">How do I check if the order is confirmed?</a>-->
+        <!--                    <a class="faqLevel2ItemContent">Can I pick up the shipment from Wemore’s office or hub?</a>-->
+        <!--                    <a class="faqLevel2ItemContent">How do I share products on Facebook?</a>-->
+        <!--                </div>-->
+        <!--            </div>-->
+        <!--            <div class="faqLevel2Item">-->
+        <!--                <div class="faqLevel2ItemTitle">Earn Margin</div>-->
+        <!--                <div class="faqLevel2ItemList">-->
+        <!--                    <a class="faqLevel2ItemContent">How will I know if margin has been deposited to my account?</a>-->
+        <!--                    <a class="faqLevel2ItemContent">How much margin can I add? </a>-->
+        <!--                    <a class="faqLevel2ItemContent">How will I receive my margin for Online payments?</a>-->
+        <!--                    <a class="faqLevel2ItemContent">How do I add margin?</a>-->
+        <!--                    <a class="faqLevel2ItemContent">How will I receive my margin for COD payments?</a>-->
+        <!--                </div>-->
+        <!--            </div>-->
+
+    </div>
+</div>
+<script>
+    window.onload = function () {
+        console.log('ready')
+        document.querySelector('#loading').style.display = 'none'
+        document.querySelector('#afterLoading').style.display = 'block'
+        console.log(window.location.search.slice(1).split('='))
+        let page = window.location.search.slice(1).split('=')[1]
+
+        // document.querySelector('#secondTitle').innerHTML = window.location.search.slice(1).split('=')[1]
+        judgeWhichPage(page)
+        // let oMeta = document.createElement('meta');
+        // oMeta.content = 'width=device-width, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0, user-scalable=0';
+        // oMeta.name = 'viewport';
+        // document.getElementsByTagName('head')[0].appendChild(oMeta);
+        // document.title = 'terms-conditions'
+    }
+    function goBack () {
+        // this.$router.go(-1)
+        window.history.back()
+    }
+    function judgeWhichPage (name) {
+        let list = undefined
+
+        switch (name) {
+            case 'getStart':
+                // this.secondTitle = 'Getting Started'
+                document.querySelector('#secondTitle').innerHTML = 'Getting Started'
+                this.list = [
+                    {
+                        title: 'Start with your first order',
+                        aList: [
+                            {label: 'How Wemore can help me in setting up my reselling business ?',value: '0'},
+                            {label: 'What is Wemore?', value: '1'},
+                            {label: 'How am i going to receive my first order ?',value: '2'},
+                            {label: 'How Wemore can help me to earn money? ',value: '3'},
+                            {label: 'Will i get the best quality of products? ',value: '4'},
+                            {label: 'What is Reselling with Wemore?',value: '5'},
+
+                        ]
+                    },
+
+                    // {
+                    //     title: 'Place An Order',
+                    //     aList: [
+                    //         {label: 'How to place an order for COD payment method?',value: '11'},
+                    //         {label: 'Does Wemore share its name, link or product’s price in the message that I share with my customers?', value: '12'},
+                    //         {label: 'How do I place an order?',value: '13'},
+                    //         {label: 'How to check the confirmation of order?',value: '14'},
+                    //         {label: 'Can I pick up the shipment from Wemore’s office or hub?',value: '15'},
+                    //
+                    //     ]
+                    // },
+                    // {
+                    //     title: 'Earn margin ',
+                    //     aList: [
+                    //         {label: 'Do I receive any notification regarding my margin amount?',value: '17'},
+                    //         {label: 'How much margin can i apply on each product? ', value: '18'},
+                    //         {label: 'How am I going to receive my margin for Online payments?',value: '19'},
+                    //         {label: 'How can I apply margin?',value: '20'},
+                    //         {label: 'How am I going to receive my margin for COD payments?',value: '21'},
+                    //
+                    //     ]
+                    // }
+                ]
+                addDOM(this.list)
+                break
+            case 'findProductsToShare':
+                // this.secondTitle = 'Understand what products can be sold at the easiest'
+                document.querySelector('#secondTitle').innerHTML = 'Find products to share'
+
+                this.list = [
+                    {
+                        title: 'Discover products',
+                        aList: [
+                            {label: 'How to search for the products that I have already shared with my clients?',value: '32'},
+                            {label: 'How to search for a product ?', value: '33'},
+                            {label: 'How can I update myself about the latest fashion trends?',value: '34'},
+                            {label: 'How to add products from different suppliers to my cart?',value: '35'},
+                            {label: 'What is the role or importance of  “For You”section?',value: '36'},
+                            // {label: 'What is the “For You” section?',value: '37'},
+                        ]
+                    },
+                    {
+                        title: 'Receive product notifications',
+                        aList: [
+                            {label: 'How will I receive notifications on Whatsapp?',value: '38'},
+                            // {label: 'How will I receive notifications for product?', value: '39'},
+                            {label: 'How do I receive notifications for a select collection of products?',value: '40'},
+                            {label: 'What to do when i do not receive product notifications ?',value: '41'},
+
+                        ]
+                    },
+                    // {
+                    //     title: 'Share Products',
+                    //     aList: [
+                    //         {label: 'Do I have to check the availability before I share the products?',value: '200'},
+                    //         {label: 'How can I find out what to share?', value: '6'},
+                    //         {label: 'How to share products on Whatsapp?',value: '7'},
+                    //         {label: 'Is it important to share the products? ',value: '8'},
+                    //         {label: 'How to share products on Facebook?',value: '9'},
+                    //         // {label: 'How do I share products on Facebook?',value: '10'},
+                    //
+                    //     ]
+                    // },
+                    // {
+                    //     title: 'Use Whatsapp',
+                    //     aList: [
+                    //         {label: 'How can I use whatsapp?',value: '301'},
+                    //         {label: 'How can I find or connect with customers on Whatsapp?',value: '22'},
+                    //         {label: 'How to share products on Whatsapp?',value: '7'},
+                    //
+                    //         {label: 'How does whatsapp status can help me to find the clients?', value: '23'},
+                    //         {label: 'How often should i share the links of products on whatsapp?',value: '25'},
+                    //         // {label: 'How does putting a Whatsapp status help in finding customers?',value: '26'},
+                    //         // {label: 'How often should I share products on Whatsapp?',value: '27'},
+                    //
+                    //     ]
+                    // },
+                    // {
+                    //     title: 'Use Facebook',
+                    //     aList: [
+                    //         {label: 'How can I connect with my clients on Facebook?',value: '28'},
+                    //         {label: 'How to share products on Facebook?',value: '9'},
+                    //
+                    //         {label: 'What type of Facebook groups should I join?', value: '29'},
+                    //         {label: 'How to create a page on Facebook?',value: '30'},
+                    //         {label: 'Should I join Facebook groups?',value: '31'},
+                    //
+                    //     ]
+                    // },
+                ]
+                addDOM(this.list)
+                break
+            case 'DiscoverProducts':
+                // this.secondTitle = 'Understand what products can be sold at the easiest'
+                document.querySelector('#secondTitle').innerHTML = 'Discovering products'
+
+                this.list = [
+                    {
+                        title: 'Discovering products',
+                        aList: [
+                            {label: 'Do I have to check the availability before I share the products?',value: '200'},
+                            {label: 'How can I find out what to share?', value: '6'},
+                            {label: 'Is it essential to share the products?', value: '211'},
+
+                            // {label: 'How to share products on Whatsapp?',value: '7'},
+                            // {label: 'Is it important to share the products? ',value: '8'},
+                            // {label: 'How to share products on Facebook?',value: '9'},
+                            // {label: 'How do I share products on Facebook?',value: '10'},
+
+                        ]
+                    },
+                    ]
+                    addDOM(this.list)
+                break
+
+
+            case 'SocialMedia':
+                // this.secondTitle = 'Social Media '
+                document.querySelector('#secondTitle').innerHTML = 'Use social media '
+
+                this.list = [
+                    {
+                        title: 'Use Whatsapp',
+                        aList: [
+                            {label: 'How can I use whatsapp?',value: '301'},
+                            {label: 'How can I find or connect with customers on Whatsapp?',value: '22'},
+                            {label: 'How to share products on Whatsapp?',value: '7'},
+                            {label: 'How does Whatsapp status can help me find the clients?', value: '23'},
+                            {label: 'How often should I share the catalogs/products on Whatsapp?',value: '25'},
+                            // {label: 'How does putting a Whatsapp status help in finding customers?',value: '26'},
+                            // {label: 'How often should I share products on Whatsapp?',value: '27'},
+
+                        ]
+                    },
+                    {
+                        title: 'Use Facebook',
+                        aList: [
+                            {label: 'How can I connect with my clients on Facebook?',value: '28'},
+                            {label: 'How to share products on Facebook?',value: '9'},
+                            {label: 'What type of Facebook groups should I join?', value: '29'},
+                            // {label: 'How to create a page on Facebook?',value: '30'},
+                            // {label: 'Should I join Facebook groups?',value: '31'},
+
+                        ]
+                    },
+                ]
+                addDOM(this.list)
+                break
+            case 'manageOrdersDelivery':
+                // this.secondTitle = 'Manage orders & delivery'
+                document.querySelector('#secondTitle').innerHTML = 'Manage orders and delivery'
+
+                this.list = [
+                    {
+                        title: 'Placing order',
+                        aList: [
+                            {label: 'Is there a minimum quantity to buy any product or can i buy a single product also?',value: '42'},
+                            {label: 'Do i have to check the product’s availability before I place an order?', value: '201'},
+                            {label: 'What is the process of placing order in bulk?',value: '43'},
+                            // {label: 'Does Wemore provides the review of suppliers?',value: '44'},
+                            // {label: 'How can I place an order?',value: '45'},
+                            {label: 'What if i want to place an order for a product that is already out of stock? ',value: '46'},
+                            {label: 'How to change the address after placing an order? ',value: '901'},
+                            {label: 'Do we get any Discounts? ',value: '902'},
+                            {label: 'Does wemore provide a review of suppliers? ',value: '903'},
+
+                        ]
+                    },
+                    {
+                        title: 'Placing order and payment',
+                        aList: [
+                            // {label: 'How can i make a payment through IMPS?',value: '61'},
+                            // {label: 'Payment with Paytm is available? ', value: '62'},
+                            {label: 'Can I block the order and make a payment later?',value: '63'},
+                            {label: 'What are the different methods to make payments?',value: '64'},
+                            {label: 'How to place an order for COD payment method?',value: '11'},
+                            {label: 'How can I place an order for online payment?',value: '13'},
+                            {label: 'Does Wemore share its name, link or product’s price in the message that I share with my customers?', value: '12'},
+                            {label: 'How to check the confirmation of order?',value: '14'},
+                            {label: 'Can I pick up the shipment from Wemore’s office or hub?',value: '15'},
+                            // {
+                            //     title: 'Place An Order',
+                            //     aList: [
+                            //         {label: 'How to place an order for COD payment method?',value: '11'},
+                            //         {label: 'Does Wemore share its name, link or product’s price in the message that I share with my customers?', value: '12'},
+                            //         {label: 'How do I place an order?',value: '13'},
+                            //         {label: 'How to check the confirmation of order?',value: '14'},
+                            //         {label: 'Can I pick up the shipment from Wemore’s office or hub?',value: '15'},
+                            //
+                            //     ]
+                            // },
+                            // {label: 'How to make a payment through COD?',value: '65'},
+                            // {label: 'How to make online transaction?',value: '66'},
+                            // {label: 'How do I make an online payment?',value: '67'},
+
+                        ]
+                    },
+                    {
+                        title: 'Cash On Delivery ',
+                        aList: [
+                            {label: 'What to do when I can not place an order using COD method?',value: '68'},
+                            {label: 'How much money I have to pay for opting COD?', value: '69'},
+                            {label: 'Is there any limitation when we place a COD order?',value: '70'},
+                            // {label: 'Why should I offer Cash On Delivery to my customers?',value: '71'},
+
+                        ]
+                    },
+                    {
+                        title: 'Track shipment ',
+                        aList: [
+                            {label: 'Do you provide international shipping?',value: '47'},
+                            {label: 'How can i calculate the shipping charges? ',value: '53'},
+
+                            {label: 'How can I track the shipping procedure of an order?', value: '48'},
+                            {label: 'Am I supposed to specify or change the delivery dates?',value: '49'},
+                            {label: 'How much time will it take for shipment?',value: '50'},
+
+                            {label: 'What to do if a customer is not available during delivery?',value: '52'},
+                            {label: 'What happens if a customer is not ready to accept the product during delivery?',value: '51'},
+
+
+                        ]
+                    },
+
+                ]
+                addDOM(this.list)
+                break
+            case 'trackMarginBonus':
+                // this.secondTitle = 'Margin and Bonus'
+                document.querySelector('#secondTitle').innerHTML = 'Margin'
+
+                this.list = [
+                    {
+                        title: 'Margin ',
+                        aList: [
+                            {label: 'What is a margin?',value: '88'},
+                            {label: 'Do I receive any notification regarding my margin amount?',value: '17'},
+                            {label: 'How much margin can i apply on each product? ', value: '18'},
+                            {label: 'How am I going to receive my margin for Online payments?',value: '19'},
+                            {label: 'How can I add margin?',value: '20'},
+                            {label: 'How am I going to receive my margin for COD payments?',value: '21'},
+
+                            {label: 'Some products have an MRP tag. Can I add my margin above the MRP?',value: '85'},
+
+                            {label: 'I have received incorrect margin. What do I do?',value: '86'},
+
+
+                            // {label: 'How am i going to receive margin for my  COD payments?',value: '82'},
+                            // {label: 'What is the appropriate margin?', value: '83'},
+                            // {label: 'How to add margin for a product?',value: '84'},
+                            // {label: 'When will I receive my margin? How long does it take?',value: '87'},
+
+
+                        ]
+                    },
+                    // {
+                    //     title: 'Bonus',
+                    //     aList: [
+                    //         {label: 'How can I check my bonus?',value: '89'},
+                    //         // {label: 'How do I track my bonus?',value: '89'},
+                    //         {label: 'How can I validate my bonus payments’ list?', value: '90'},
+                    //         {label: 'What is Weekly Bonus Program?',value: '91'},
+                    //         // {label: 'When will I receive my bonus?',value: '92'},
+                    //
+                    //     ]
+                    // },
+                    // {
+                    //     title: 'Manage Accounts & Settings',
+                    //     aList: [
+                    //         {label: 'How can I contact the Support Team?',value: '93'},
+                    //         {label: 'Do you charge GST or is it necessary to register for GST and become a reseller at Wemore? ', value: '94'},
+                    //         {label: 'Why should I provide my bank details?',value: '95'},
+                    //         {label: 'How can I grow my business with Wemore? ',value: '96'},
+                    //         // {label: 'How do I grow my business?',value: '97'},
+                    //         // {label: 'Do I need a GST Registration to become a Reseller with wemore?',value: '98'},
+                    //
+                    //
+                    //     ]
+                    // }
+                ]
+                addDOM(this.list)
+                break
+            case 'returnOrExchange':
+                document.querySelector('#secondTitle').innerHTML = 'Cancellation, Returns and refunds'
+                // this.secondTitle = 'Return or Exchange'
+
+                this.list = [
+                    {
+                        title: 'Cancellation ',
+                        aList: [
+                            {label: 'Do i have to pay extra charges if I cancel an order?',value: '54'},
+                            {label: 'Can I cancel an order after it has been shipped?', value: '55'},
+                            {label: 'What is the cancellation procedure of an order?',value: '56'},
+
+
+                        ]
+                    },
+                    {
+                        title: 'Returns',
+                        aList: [
+                            {label: 'How to return an order?',value: '72'},
+                            {label: 'The product has been picked up from my customer’s address. When will I receive a refund?', value: '73'},
+                            {label: 'What is wemore\'s Return Policy?',value: '74'},
+                            // {label: 'What is the procedure to exchange an order?',value: '75'},
+                            {label: 'Why is my customer’s return request getting rejected?',value: '76'},
+
+                        ]
+                    },
+                    {
+                        title: 'Refunds',
+                        aList: [
+                            {label: 'What is refund? ',value: '77'},
+                            {label: 'Will I receive a refund amount after paying the shipping charges?', value: '78'},
+                            {label: 'What to do if I have received the incorrect refund? ',value: '79'},
+                            // {label: 'Will I get the compensation after the cancellation of order due to delay by suppliers?',value: '80'},
+                            {label: 'How will I know if a refund has been deposited into my account?',value: '81'},
+
+                        ]
+                    },
+                ]
+                addDOM(this.list)
+                break
+            case 'manageAccountsSettings':
+                // this.secondTitle = 'Manage Accounts & Settings'
+                document.querySelector('#secondTitle').innerHTML = 'Manage Accounts & Settings'
+
+                this.list = [
+                    {
+                        title: 'Manage Accounts & Settings',
+                        aList: [
+                            {label: 'How can I contact the Support Team?',value: '93'},
+                            {label: 'Where can I update my bank account details?',value:'210'},
+                            {label: 'Do you charge GST or is it necessary to register for GST and become a reseller at Wemore? ', value: '94'},
+                            {label: 'Why should I provide my bank details?',value: '95'},
+                            {label: 'How can I grow my business with Wemore? ',value: '96'},
+                            // {label: 'How do I grow my business?',value: '97'},
+                            // {label: 'Do I need a GST Registration to become a Reseller with wemore?',value: '98'},
+
+
+                        ]
+                    }
+                ]
+                addDOM(this.list)
+
+                break
+
+            case 'makePayments':
+                // this.secondTitle = 'Payment '
+                document.querySelector('#secondTitle').innerHTML = 'Payment'
+
+                this.list = [
+                    {
+                        title: 'Make payments',
+                        aList: [
+                            {label: 'How can i make a payment through IMPS?',value: '61'},
+                            {label: 'Payment with Paytm is available? ', value: '62'},
+                            {label: 'Can i block an order and make payment later?',value: '63'},
+                            {label: 'What are the different methods to make payments?',value: '64'},
+                            {label: 'How to make a payment through COD?',value: '65'},
+                            {label: 'How to make online transaction?',value: '66'},
+                            // {label: 'How do I make an online payment?',value: '67'},
+
+                        ]
+                    },
+                    // {
+                    //     title: 'Cash On Delivery ',
+                    //     aList: [
+                    //         {label: 'What to do when I can not place an order using COD method?',value: '68'},
+                    //         {label: 'How much money I have to pay for opting COD?', value: '69'},
+                    //         {label: 'Is there any limitation when we place a COD order?',value: '70'},
+                    //         // {label: 'Why should I offer Cash On Delivery to my customers?',value: '71'},
+                    //
+                    //     ]
+                    // },
+                    // {
+                    //     title: 'Return or Exchange',
+                    //     aList: [
+                    //         {label: 'How to return an order?',value: '72'},
+                    //         {label: 'The product has been picked up from my customer’s address. When will I receive a refund?', value: '73'},
+                    //         {label: 'What is wemore’s Return & Exchange Policy?',value: '74'},
+                    //         {label: 'What is the procedure to exchange an order?',value: '75'},
+                    //         {label: 'Why is my customer’s return request getting rejected?',value: '76'},
+                    //
+                    //     ]
+                    // },
+                    // {
+                    //     title: 'Refunds',
+                    //     aList: [
+                    //         {label: 'What is refund? ',value: '77'},
+                    //         {label: 'Will I receive a refund amount after paying the shipping charges?', value: '78'},
+                    //         {label: 'What to do if I have got the incorrect refund? ',value: '79'},
+                    //         {label: 'Will I get the compensation after the cancellation of order due to delay by suppliers?',value: '80'},
+                    //         {label: 'How will I know if a refund has been deposited into my account?',value: '81'},
+                    //
+                    //     ]
+                    // },
+                ]
+                addDOM(this.list)
+                break
+
+        }
+        // console.log(this.list)
+    }
+    function addDOM (list) {
+        let faqLevel2Content = document.querySelector('.faqLevel2Content')
+       list.forEach((element) => {
+           let faqLevel2Item = document.createElement('div')
+           faqLevel2Item.classList.add('faqLevel2Item')
+           let titleDom = document.createElement('div')
+           titleDom.classList.add('faqLevel2ItemTitle')
+           titleDom.innerHTML = element.title
+           faqLevel2Item.appendChild(titleDom)
+
+
+           let faqLevel2ItemList = document.createElement('div')
+           faqLevel2ItemList.classList.add('faqLevel2ItemList')
+           element.aList.forEach((aLink) => {
+               let aDom =  document.createElement('a')
+               aDom.classList.add('faqLevel2ItemContent')
+               aDom.innerHTML = aLink.label
+               aDom.dataset.id = aLink.value
+               aDom.onclick = jumpToDetail
+               faqLevel2ItemList.appendChild(aDom)
+           })
+           console.log(faqLevel2ItemList)
+           faqLevel2Item.appendChild(faqLevel2ItemList)
+           faqLevel2Content.appendChild(faqLevel2Item)
+       })
+    }
+    function jumpToDetail (event) {
+        console.log(event)
+        // this.$router.push({name: 'How-to-detail',params: {id:value}})
+        console.log(window.location)
+
+        window.location.href = `${window.location.origin}${window.location.pathname.slice(0,-10)}detail/index.html${window.location.search}&id=${event.target.dataset.id}`
+    }
+</script>
+</body>
+</html>
