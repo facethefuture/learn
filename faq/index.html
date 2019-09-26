@@ -8,20 +8,24 @@
 </head>
 <body>
 <style>
+    html,body{
+        height: 100%;
+        margin: 0;
+    }
     .learningAcademyHeader {
         padding: 16px;
-        position: fixed;
+        /*position: fixed;*/
         background-color: #fff;
         top: 0;
         left: 50%;
         z-index: 2;
-        transform: translateX(-50%);
-        -webkit-transform: translateX(-50%);
-        -moz-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-        -o-transform: translateX(-50%);
+        /*transform: translateX(-50%);*/
+        /*-webkit-transform: translateX(-50%);*/
+        /*-moz-transform: translateX(-50%);*/
+        /*-ms-transform: translateX(-50%);*/
+        /*-o-transform: translateX(-50%);*/
         max-width: 600px;
-        width: 100%;
+        /*width: 100%;*/
     }
     .learningAcademyHeader .headerText {
         font-size: 16px;
@@ -82,7 +86,7 @@
     }
 
     .howToContentList {
-        margin-top: 60px;
+        /*margin-top: 60px;*/
         /*padding-bottom: 10px;*/
     }
     .howToContentList .howToContentItem {
@@ -128,23 +132,23 @@
         color: #999;
         margin-top: 4px;
     }
-    .learningAcademyHeader {
-        padding: 16px;
-        position: fixed;
-        background-color: #fff;
-        top: 0;
-        left: 50%;
-        z-index: 2;
-        transform: translateX(-50%);
-        max-width: 600px;
-        width: 100%;
-    }
-    .learningAcademyHeader .headerText {
-        font-size: 16px;
-        line-height: 1.5;
-        display: inline-block;
-        color: #333;
-    }
+    /*.learningAcademyHeader {*/
+    /*    padding: 16px;*/
+    /*    !*position: fixed;*!*/
+    /*    background-color: #fff;*/
+    /*    top: 0;*/
+    /*    left: 50%;*/
+    /*    z-index: 2;*/
+    /*    !*transform: translateX(-50%);*!*/
+    /*    max-width: 600px;*/
+    /*    !*width: 100%;*!*/
+    /*}*/
+    /*.learningAcademyHeader .headerText {*/
+    /*    font-size: 16px;*/
+    /*    line-height: 1.5;*/
+    /*    display: inline-block;*/
+    /*    color: #333;*/
+    /*}*/
 </style>
 <div style="display: flex;
     justify-content: center;
@@ -159,9 +163,9 @@ id="loading">
 </div>
 
 
-<div id="afterLoading" style="display: none">
+<div id="afterLoading" style="display: none;height: 100%;margin: 8px;">
     <div class="learningAcademyHeader">
-        <div class="headerText" style="padding-left: 16px">Learn</div>
+        <div class="headerText">Learn</div>
     </div>
     <div class="howToContentList" >
         <a class="howToContentItem" onclick="jumpToSecond('getStart')">
@@ -172,7 +176,7 @@ id="loading">
                 <div class="howToContentText textEllipsis">
                     Getting started
                 </div>
-                <div class="howToContentSubtext textEllipsis">Get Your First Order</div>
+                <div class="howToContentSubtext textEllipsis">Get your first order</div>
             </div>
         </a>
 <!--        <a class="howToContentItem" onclick="jumpToSecond('findMoreCustomer')">-->
@@ -194,7 +198,7 @@ id="loading">
                 <div class="howToContentText textEllipsis">
                     Find products to share
                 </div>
-                <div class="howToContentSubtext textEllipsis">Understand what products would sell easily</div>
+                <div class="howToContentSubtext textEllipsis">Understand what products can be sold easily</div>
             </div>
         </a>
         <a class="howToContentItem" onclick="jumpToSecond('DiscoverProducts')">
@@ -205,20 +209,20 @@ id="loading">
                 <div class="howToContentText textEllipsis">
                     Discover products
                 </div>
-                <div class="howToContentSubtext textEllipsis">Discover products</div>
+                <div class="howToContentSubtext textEllipsis">Learn how to sell on social media</div>
             </div>
         </a>
-        <a class="howToContentItem" onclick="jumpToSecond('SocialMedia')">
-            <div class="howToContentImg">
-                <img src="./image/social-whatsapp.png">
-            </div>
-            <div class="howToContentBox">
-                <div class="howToContentText textEllipsis">
-                    Use social media
-                </div>
-                <div class="howToContentSubtext textEllipsis">Use social media</div>
-            </div>
-        </a>
+<!--        <a class="howToContentItem" onclick="jumpToSecond('SocialMedia')">-->
+<!--            <div class="howToContentImg">-->
+<!--                <img src="./image/social-whatsapp.png">-->
+<!--            </div>-->
+<!--            <div class="howToContentBox">-->
+<!--                <div class="howToContentText textEllipsis">-->
+<!--                    Use social media-->
+<!--                </div>-->
+<!--                <div class="howToContentSubtext textEllipsis">Use social media</div>-->
+<!--            </div>-->
+<!--        </a>-->
         <a class="howToContentItem" onclick="jumpToSecond('manageOrdersDelivery')">
             <div class="howToContentImg">
                 <img src="./image/manage-orders-and-delivery.png">
@@ -227,7 +231,7 @@ id="loading">
                 <div class="howToContentText textEllipsis">
                     Manage orders and delivery
                 </div>
-                <div class="howToContentSubtext textEllipsis">Everything you need to fulfill orders</div>
+                <div class="howToContentSubtext textEllipsis">Learn how to manage your orders and delivery</div>
             </div>
         </a>
 <!--        <a class="howToContentItem" onclick="jumpToSecond('makePayments')">-->
@@ -247,9 +251,9 @@ id="loading">
             </div>
             <div class="howToContentBox">
                 <div class="howToContentText textEllipsis">
-                    Margin
+                    Margins
                 </div>
-                <div class="howToContentSubtext textEllipsis">Margin and Bonus</div>
+                <div class="howToContentSubtext textEllipsis">Everything you need to know about margin</div>
             </div>
         </a>
         <a class="howToContentItem" onclick="jumpToSecond('returnOrExchange')">
@@ -258,9 +262,9 @@ id="loading">
             </div>
             <div class="howToContentBox">
                 <div class="howToContentText textEllipsis">
-                    Cancellation, Returns and refunds
+                    Cancellation, returns and refunds
                 </div>
-                <div class="howToContentSubtext textEllipsis">Cancellation, Returns and refunds</div>
+                <div class="howToContentSubtext textEllipsis">How cancel orders and claim refund</div>
             </div>
         </a>
 
@@ -271,18 +275,22 @@ id="loading">
             </div>
             <div class="howToContentBox">
                 <div class="howToContentText textEllipsis">
-                    Manage Accounts & Settings
+                    Manage accounts and settings
                 </div>
-                <div class="howToContentSubtext textEllipsis">Manage Accounts & Settings</div>
+                <div class="howToContentSubtext textEllipsis">Manage accounts and settings</div>
             </div>
         </a>
 
     </div>
 </div>
+<script type="application/javascript" src="./loading/loading.js"></script>
+
 <script>
     window.onload = function () {
         document.querySelector('#loading').style.display = 'none'
         document.querySelector('#afterLoading').style.display = 'block'
+        refresh()
+
     }
     function jumpToSecond(page) {
         console.log(page)

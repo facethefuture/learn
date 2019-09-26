@@ -8,6 +8,10 @@
     <title>Learn</title>
 </head>
 <style>
+    html,body{
+        height: 100%;
+        margin: 0;
+    }
     body{
         margin: 0;
         padding: 0;
@@ -78,7 +82,7 @@
      id="loading">
     <div id="circle" ></div>
 </div>
-<div id="afterLoading" style="display: none">
+<div id="afterLoading" style="display: none;height: 100%;">
 
     <div class="faqBreadcrumb" >
         <a onclick="goBack()">Home</a>
@@ -144,6 +148,8 @@
 
     </div>
 </div>
+<script type="application/javascript" src="../loading/loading.js"></script>
+
 <script>
     window.onload = function () {
         console.log('ready')
@@ -154,6 +160,7 @@
 
         // document.querySelector('#secondTitle').innerHTML = window.location.search.slice(1).split('=')[1]
         judgeWhichPage(page)
+        refresh()
         // let oMeta = document.createElement('meta');
         // oMeta.content = 'width=device-width, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0, user-scalable=0';
         // oMeta.name = 'viewport';
@@ -170,7 +177,7 @@
         switch (name) {
             case 'getStart':
                 // this.secondTitle = 'Getting Started'
-                document.querySelector('#secondTitle').innerHTML = 'Getting Started'
+                document.querySelector('#secondTitle').innerHTML = 'Getting started'
                 this.list = [
                     {
                         title: 'Start with your first order',
@@ -279,7 +286,7 @@
                 break
             case 'DiscoverProducts':
                 // this.secondTitle = 'Understand what products can be sold at the easiest'
-                document.querySelector('#secondTitle').innerHTML = 'Discovering products'
+                document.querySelector('#secondTitle').innerHTML = 'Discover products'
 
                 this.list = [
                     {
@@ -296,16 +303,6 @@
 
                         ]
                     },
-                    ]
-                    addDOM(this.list)
-                break
-
-
-            case 'SocialMedia':
-                // this.secondTitle = 'Social Media '
-                document.querySelector('#secondTitle').innerHTML = 'Use social media '
-
-                this.list = [
                     {
                         title: 'Use Whatsapp',
                         aList: [
@@ -330,9 +327,43 @@
 
                         ]
                     },
-                ]
-                addDOM(this.list)
+                    ]
+                    addDOM(this.list)
                 break
+
+
+            // case 'SocialMedia':
+            //     // this.secondTitle = 'Social Media '
+            //     document.querySelector('#secondTitle').innerHTML = 'Use social media '
+            //
+            //     this.list = [
+            //         {
+            //             title: 'Use Whatsapp',
+            //             aList: [
+            //                 {label: 'How can I use whatsapp?',value: '301'},
+            //                 {label: 'How can I find or connect with customers on Whatsapp?',value: '22'},
+            //                 {label: 'How to share products on Whatsapp?',value: '7'},
+            //                 {label: 'How does Whatsapp status can help me find the clients?', value: '23'},
+            //                 {label: 'How often should I share the catalogs/products on Whatsapp?',value: '25'},
+            //                 // {label: 'How does putting a Whatsapp status help in finding customers?',value: '26'},
+            //                 // {label: 'How often should I share products on Whatsapp?',value: '27'},
+            //
+            //             ]
+            //         },
+            //         {
+            //             title: 'Use Facebook',
+            //             aList: [
+            //                 {label: 'How can I connect with my clients on Facebook?',value: '28'},
+            //                 {label: 'How to share products on Facebook?',value: '9'},
+            //                 {label: 'What type of Facebook groups should I join?', value: '29'},
+            //                 // {label: 'How to create a page on Facebook?',value: '30'},
+            //                 // {label: 'Should I join Facebook groups?',value: '31'},
+            //
+            //             ]
+            //         },
+            //     ]
+            //     addDOM(this.list)
+            //     break
             case 'manageOrdersDelivery':
                 // this.secondTitle = 'Manage orders & delivery'
                 document.querySelector('#secondTitle').innerHTML = 'Manage orders and delivery'
@@ -414,7 +445,7 @@
                 break
             case 'trackMarginBonus':
                 // this.secondTitle = 'Margin and Bonus'
-                document.querySelector('#secondTitle').innerHTML = 'Margin'
+                document.querySelector('#secondTitle').innerHTML = 'Margins'
 
                 this.list = [
                     {
@@ -468,7 +499,7 @@
                 addDOM(this.list)
                 break
             case 'returnOrExchange':
-                document.querySelector('#secondTitle').innerHTML = 'Cancellation, Returns and refunds'
+                document.querySelector('#secondTitle').innerHTML = 'Cancellation, returns and refunds'
                 // this.secondTitle = 'Return or Exchange'
 
                 this.list = [
@@ -509,7 +540,7 @@
                 break
             case 'manageAccountsSettings':
                 // this.secondTitle = 'Manage Accounts & Settings'
-                document.querySelector('#secondTitle').innerHTML = 'Manage Accounts & Settings'
+                document.querySelector('#secondTitle').innerHTML = 'Manage accounts and settings'
 
                 this.list = [
                     {
