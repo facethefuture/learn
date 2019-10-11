@@ -46,44 +46,6 @@
     }
 </style>
 <body>
-<!--<main class="parent">-->
-
-
-<!--    <ul id="refreshContainer">-->
-
-<!--        <li>111</li>-->
-
-<!--        <li>222</li>-->
-
-<!--        <li>333</li>-->
-
-<!--        <li>444</li>-->
-
-<!--        <li>555</li>-->
-
-<!--        <li>111</li>-->
-
-<!--        <li>222</li>-->
-
-<!--        <li>333</li>-->
-
-<!--        <li>444</li>-->
-
-<!--        <li>555</li>-->
-
-<!--        <li>111</li>-->
-
-<!--        <li>222</li>-->
-
-<!--        <li>333</li>-->
-
-<!--        <li>444</li>-->
-
-<!--        <li>555</li>-->
-
-<!--    </ul>-->
-
-<!--</main>-->
 
 
 <div style="display: flex;
@@ -120,6 +82,7 @@
     </div>
 </div>
 <script type="application/javascript" src="../../loading/loading.js"></script>
+<script type="application/javascript" src="data.js"></script>
 <script  type="text/javascript">
 
     function goBackOne () {
@@ -132,10 +95,6 @@
         // this.$router.go(-2)
         window.history.go(-2)
     }
-</script>
-<script type="module">
-    import {DATA_JSON} from './data.js'
-    console.log(DATA_JSON)
     window.onload = function () {
         document.querySelector('#loading').style.display = 'none'
         document.querySelector('#afterLoading').style.display = 'block'
@@ -156,7 +115,6 @@
         // document.getElementsByTagName('head')[0].appendChild(oMeta);
         // document.title = 'terms-conditions'
     }
-
 
     function judgeWhichPage (name) {
         switch (name) {
@@ -224,5 +182,6 @@
 
     }
 </script>
+
 </body>
 </html>

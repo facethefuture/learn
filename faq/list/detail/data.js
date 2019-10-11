@@ -440,7 +440,7 @@ const DATA_JSON = {
 
     "93": {
         "title": "How can I contact the Support Team?",
-        "answer": "You can visit wemore site on help@wemore.in. The wemore team is available between 10:00 AM to 6:00 PM"
+        "answer": "You can mail us at help@wemore.in. wemore team helps to solve your issues and we are available between 09:30 AM to 6:30 AM (Monday to Saturday)."
     },
     "210": {
         "title": "Where can I update my bank account details?",
@@ -464,4 +464,4 @@ const DATA_JSON = {
     }
 
 }
-export {DATA_JSON}
+// export {DATA_JSON}

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0,user-scalable=no">
+<!--    <link rel="stylesheet" href="../../loading/style.css">-->
+
+    <title>Activity</title>
+</head>
+<style>
+
+    #circle{
+        margin: 20px auto;
+        width: 50px;
+        height: 50px;
+        border: 5px white solid;
+        border-left-color: #00b0ff;
+        border-right-color:#00b0ff;
+        border-radius: 100%;
+        animation: loading1 1s infinite linear;
+    }
+    @keyframes loading1{
+        from{transform: rotate(0deg)}to{transform: rotate(360deg)}
+    }
+
+    html,body{
+        height: 100%;
+        margin: 0;
+        width: 100%;
+        /*font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;*/
+        font-family: Helvetica Neue,Helvetica,Roboto,Segoe UI,Arial,sans-serif;
+    }
+    /*.faqBreadcrumb {*/
+    /*    font-size: 14px;*/
+    /*    line-height: 24px;*/
+    /*    padding: 32px 16px;*/
+    /*    color: #999;*/
+    /*    background: #fafafa;*/
+    /*}*/
+    /*.faqBreadcrumb a {*/
+    /*    !*padding: 8px 0 8px 12px;*!*/
+    /*    color: #5c6ac4;*/
+    /*    !*display: block;*!*/
+    /*    font-size: 14px;*/
+    /*    line-height: 24px;*/
+    /*    position: relative;*/
+    /*    cursor: pointer;*/
+    /*}*/
+
+    .faqLevel3Content {
+        padding: 10px 16px;
+        background-color: #fff;
+    }
+    .faqLevel3Content .faqLevel3ItemTitle {
+        font-size: 16px;
+        line-height: 22px;
+        color: #333;
+    }
+    .faqLevel3Content .faqLevel3ItemText {
+        font-size: 14px;
+        line-height: 24px;
+        color: #666;
+        margin-top: 3px;
+    }
+</style>
+<body>
+
+
+
+<!--<div style="display: flex;-->
+<!--    justify-content: center;-->
+<!--    align-items: center;-->
+<!--    width: 100%;-->
+<!--    height: 100%;-->
+<!--    position: absolute;-->
+<!--    z-index: 100000;-->
+<!--    margin: 0;"-->
+<!--     id="loading">-->
+<!--    <div id="circle" ></div>-->
+<!--</div>-->
+<!--<p class="refreshText"></p>-->
+
+<div id="afterLoading" style="height: 100%;">
+
+</div>
+<script  type="text/javascript">
+
+
+    window.onload = function () {
+        // document.querySelector('#loading').style.display = 'none'
+        // document.querySelector('#afterLoading').style.display = 'block'
+        // console.log('ready')
+        var list = [
+            {title: '- How to avail the wemore cashback offer?',answer: 'Offer valid for all users who place up to five orders during the offer period'},
+            {title: '- How long is the offer valid for?',answer: 'The offer time period is from October 4th, 12 AM to October 20th, 11:59 PM.'},
+            {title: '- When will I get my cashback?',answer: 'The applicable cashback under this Offer will be credited to your Bank Account within 7 business days after the order return period is over. (The cashback will be credited within 7 days post Return Period of the product provided the item is not canceled, rejected or returned.)'},
+            {title: '- How is the Cashback amount calculated?',answer: 'Cashback is calculated on the Product Price (not Margin). 40% on the Product Price or Rs 200 Cashback whichever is lower for up to Five successful orders placed during the offer period'},
+            {title: '- What happens if I cancel/return my order?',answer: 'Returned or Cancelled orders will not be considered for the cashback offer.'},
+            {title: '- How will I check if my cashback is credited?',answer: 'You will receive Call / SMS notification every time the cashback amount is confirmed. You can also track the cashback with our Customer Support Team (help@wemore.in)'},
+            {title: '- What is the minimum transaction size for the cashback for the duration of the event?',answer: 'There is no minimum transaction amount to avail cashback under this Offer.'},
+            {title: '- Other Points?',answer: 'Note: Delivery TAT for International Products delivery time: 15 - 20 Days & Domestic product delivery time : 3 - 5 Days.'}
+        ]
+        // addDOM(list)
+        for (var i in list) {
+            console.log(list[i])
+            var element = list[i]
+            let faqLevel3Content = document.createElement('div')
+            faqLevel3Content.classList.add('faqLevel3Content')
+            let faqLevel3ItemTitle = document.createElement('div')
+            faqLevel3ItemTitle.classList.add('faqLevel3ItemTitle')
+            // let titleDom = document.createElement('div')
+            // titleDom.classList.add('faqLevel2ItemTitle')
+            faqLevel3ItemTitle.innerHTML = element.title
+            // faqLevel2Item.appendChild(titleDom)
+
+
+            let faqLevel3ItemText = document.createElement('div')
+            faqLevel3ItemText.classList.add('faqLevel3ItemText')
+            faqLevel3ItemText.innerHTML = element.answer
+            // element.aList.forEach((aLink) => {
+            //     let aDom =  document.createElement('a')
+            //     aDom.classList.add('faqLevel2ItemContent')
+            //     aDom.innerHTML = aLink.label
+            //     aDom.dataset.id = aLink.value
+            //     aDom.onclick = jumpToDetail
+            //     faqLevel2ItemList.appendChild(aDom)
+            // })
+            // console.log(faqLevel2ItemList)
+            faqLevel3Content.appendChild(faqLevel3ItemTitle)
+            faqLevel3Content.appendChild(faqLevel3ItemText)
+            document.querySelector('#afterLoading').appendChild(faqLevel3Content)
+        }
+        // document.querySelector('#secondTitle').innerHTML = window.location.search.slice(1).split('=')[1]
+        // refresh()
+
+
+    }
+
+
+
+</script>
+
+</body>
+</html>
