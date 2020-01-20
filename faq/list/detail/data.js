@@ -363,6 +363,22 @@ const DATA_JSON = {
         "title": "Why is my customer’s return request getting rejected?",
         "answer": "It is possible only if you have not provided an appropriate details of the products to your customers. \n<br><br>To ensure that your return request is approved:  \n<br><br>1.Upload only the original product image\n<br><br>2.Do not upload the image of the catalog"
     },
+
+    "770": {
+        "title": "Why am I not able to raise a return request for some products?",
+        "answer": "●You cannot raise a return request if the product is non-returnable; for such products, you will see the ‘No Return’ label in the product details.\n<br><br>" +
+            "●Also, if a return request has been made after 7 days of delivery; wemore does not accept any returns after that time frame."
+    },
+    "771": {
+        "title": " How Do I track a product’s return status?",
+        "answer": "●Go to ‘Orders’, click on ‘Return’ tab.\n<br><br>" +
+            "●Select a product and click on the ‘Track’ button.\n<br><br>" +
+            "● Under ‘wemore judgement’, you will see ‘Agree’ for approved return requests and ‘Disagree’ for declined."
+    },
+    "772": {
+        "title": "What is ‘No Return’ label? Why do I see ‘No Return’ label only for certain products?’",
+        "answer": "The ‘No Return label’ is for products that cannot be returned. And, keeping the customer’s hygiene aspect in my mind, return request for products like cosmetics and inner garments is not accepted by wemore."
+    },
     "77": {
         "title": "What is refund? ",
         "answer": "It is an amount that is returned to you for prepaid orders when you return or cancel the order."
