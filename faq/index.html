@@ -36,7 +36,7 @@
 
     #learningAcademyTabs {
         position: fixed;
-        top: 56px;
+        /*top: 56px;*/
         left: 50%;
         display: flex;
         box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
@@ -143,7 +143,7 @@
     /*    max-width: 600px;*/
     /*    !*width: 100%;*!*/
     /*}*/
-    /*.learningAcademyHeader .headerText {*/
+        /*.learningAcademyHeader .headerText {*/
     /*    font-size: 16px;*/
     /*    line-height: 1.5;*/
     /*    display: inline-block;*/
@@ -164,9 +164,132 @@ id="loading">
 
 
 <div id="afterLoading" style="display: none;height: 100%;margin: 8px;">
+    <div id="learningAcademyTabs" >
+        <div class="learningAcademyTabItem " id="TabItem1" class="ActiveTabItem">Must-See</div>
+        <div class="learningAcademyTabItem " id="TabItem2" >How-To</div>
+
+    </div>
     <div class="learningAcademyHeader">
         <div class="headerText">Learn</div>
+        <div class="headerText">Learn</div>
+
     </div>
+    <div class="howToContentList" >
+        <a class="howToContentItem" onclick="jumpToSecond('getStart')">
+            <div class="howToContentImg">
+                <img src="./image/get-your-first-order.png">
+            </div>
+            <div class="howToContentBox">
+                <div class="howToContentText textEllipsis">
+                    Getting started
+                </div>
+                <div class="howToContentSubtext textEllipsis">Get your first order</div>
+            </div>
+        </a>
+        <!--        <a class="howToContentItem" onclick="jumpToSecond('findMoreCustomer')">-->
+        <!--            <div class="howToContentImg">-->
+        <!--                <img src="./image/find-more-customers.png">-->
+        <!--            </div>-->
+        <!--            <div class="howToContentBox">-->
+        <!--                <div class="howToContentText textEllipsis">-->
+        <!--                    Discover products-->
+        <!--                </div>-->
+        <!--                <div class="howToContentSubtext textEllipsis">Learn to sell over social media</div>-->
+        <!--            </div>-->
+        <!--        </a>-->
+        <a class="howToContentItem" onclick="jumpToSecond('findProductsToShare')">
+            <div class="howToContentImg">
+                <img src="./image/find-products-to-share.png">
+            </div>
+            <div class="howToContentBox">
+                <div class="howToContentText textEllipsis">
+                    Find products to share
+                </div>
+                <div class="howToContentSubtext textEllipsis">Understand what products can be sold easily</div>
+            </div>
+        </a>
+        <a class="howToContentItem" onclick="jumpToSecond('DiscoverProducts')">
+            <div class="howToContentImg">
+                <img src="./image/find-more-customers.png">
+            </div>
+            <div class="howToContentBox">
+                <div class="howToContentText textEllipsis">
+                    Discover products
+                </div>
+                <div class="howToContentSubtext textEllipsis">Learn how to sell on social media</div>
+            </div>
+        </a>
+        <!--        <a class="howToContentItem" onclick="jumpToSecond('SocialMedia')">-->
+        <!--            <div class="howToContentImg">-->
+        <!--                <img src="./image/social-whatsapp.png">-->
+        <!--            </div>-->
+        <!--            <div class="howToContentBox">-->
+        <!--                <div class="howToContentText textEllipsis">-->
+        <!--                    Use social media-->
+        <!--                </div>-->
+        <!--                <div class="howToContentSubtext textEllipsis">Use social media</div>-->
+        <!--            </div>-->
+        <!--        </a>-->
+        <a class="howToContentItem" onclick="jumpToSecond('manageOrdersDelivery')">
+            <div class="howToContentImg">
+                <img src="./image/manage-orders-and-delivery.png">
+            </div>
+            <div class="howToContentBox">
+                <div class="howToContentText textEllipsis">
+                    Manage orders and delivery
+                </div>
+                <div class="howToContentSubtext textEllipsis">Learn how to manage your orders and delivery</div>
+            </div>
+        </a>
+        <!--        <a class="howToContentItem" onclick="jumpToSecond('makePayments')">-->
+        <!--            <div class="howToContentImg">-->
+        <!--                <img src="./image/make-payments.png">-->
+        <!--            </div>-->
+        <!--            <div class="howToContentBox">-->
+        <!--                <div class="howToContentText textEllipsis">-->
+        <!--                    Margin-->
+        <!--                </div>-->
+        <!--                <div class="howToContentSubtext textEllipsis">All about making payments</div>-->
+        <!--            </div>-->
+        <!--        </a>-->
+        <a class="howToContentItem" onclick="jumpToSecond('trackMarginBonus')">
+            <div class="howToContentImg">
+                <img src="./image/track-margin-and-bonus.png">
+            </div>
+            <div class="howToContentBox">
+                <div class="howToContentText textEllipsis">
+                    Margins
+                </div>
+                <div class="howToContentSubtext textEllipsis">Everything you need to know about margin</div>
+            </div>
+        </a>
+        <a class="howToContentItem" onclick="jumpToSecond('returnOrExchange')">
+            <div class="howToContentImg">
+                <img src="./image/return-or-exchange.png">
+            </div>
+            <div class="howToContentBox">
+                <div class="howToContentText textEllipsis">
+                    Cancellation, returns and refunds
+                </div>
+                <div class="howToContentSubtext textEllipsis">How cancel orders and claim refund</div>
+            </div>
+        </a>
+
+
+        <a class="howToContentItem" onclick="jumpToSecond('manageAccountsSettings')">
+            <div class="howToContentImg">
+                <img src="./image/manage-accounts-and-settings.png">
+            </div>
+            <div class="howToContentBox">
+                <div class="howToContentText textEllipsis">
+                    Manage accounts and settings
+                </div>
+                <div class="howToContentSubtext textEllipsis">Manage accounts and settings</div>
+            </div>
+        </a>
+
+    </div>
+
     <div class="howToContentList" >
         <a class="howToContentItem" onclick="jumpToSecond('getStart')">
             <div class="howToContentImg">
@@ -290,7 +413,12 @@ id="loading">
         document.querySelector('#loading').style.display = 'none'
         document.querySelector('#afterLoading').style.display = 'block'
         refresh()
-
+        document.querySelector('#TabItem1').onclick = function (v) {
+                console.log(v)
+            v.className.add('ActiveTabItem')
+            document.querySelector('#TabItem2').classList.remove('ActiveTabItem')
+        }
+        document.querySelector()
     }
     function jumpToSecond(page) {
         console.log(page)
