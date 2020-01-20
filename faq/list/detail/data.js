@@ -477,6 +477,26 @@ const DATA_JSON = {
     "96": {
         "title": "How can I grow my business with Wemore? ",
         "answer": "After receiving your first order, it is the right time to build your business. Building a business is gradual but retaining it for longer time becomes difficult. So some important factors are listed below that may help you to grow and retain your business in market- \n<br><br>1.Customer base - customers plays an important role to grow your business. The more you have customers the more order you may place. If your friends and family are satisfied with your facilities they may further help you to connect with their personal networks.  \n<br><br>2.Customer satisfaction - if the customer is happy with your services and the products that you provide. It is a win-win scenario for your business to grow. You should have an availability to understand the needs and choice of your customer. You should resolve and respond timely to your customer’s queries. Ask them to give you feedback after receiving the order. Provide them the best services and gain their trust. \n<br><br>Trust and consistency - you should share the catalogues on different social media platforms regularly. You can share 2 or 3 catalogs per day at a particular time. This may engage your customers and to build trust. If the customer is dissatisfied with your order, tell them about your return and exchange policy to maintain transparency.  "
+    },
+    "150": {
+        "title": "How can I earn money on my Wemore wallet?",
+        "answer": "You can earn money on your wallet when you place orders. Refer to “Earn” page to find out how you can earn more"
+    },
+    "151": {
+        "title": "What can I use my Wemore wallet balance for?",
+        "answer": "You can use your wallet balance for placing orders on Wemore"
+    },
+    "152": {
+        "title": "When will the amount be credited to my wallet?",
+        "answer": "Amount will be credited to your Wemore wallet 7 days after the order is delivered and if there are no returns"
+    },
+    "153": {
+        "title": "Will the money I used from my wallet be refunded if the order is cancelled?",
+        "answer": "No, the money you used from your wallet to place the order will not be refunded if the order is cancelled or if the order is already accepted"
+    },
+    "154": {
+        "title": "How much money from Wemore wallet can I use for a single order?",
+        "answer": "You can use 25% of the Product price or INR 50, whichever is lower from your Wemore wallet for a single order"
     }
 
 }
