@@ -12,70 +12,41 @@
         height: 100%;
         margin: 0;
     }
-    .learningAcademyHeader {
-        padding: 16px;
-        /*position: fixed;*/
-        background-color: #fff;
-        top: 0;
-        left: 50%;
-        z-index: 2;
-        /*transform: translateX(-50%);*/
-        /*-webkit-transform: translateX(-50%);*/
-        /*-moz-transform: translateX(-50%);*/
-        /*-ms-transform: translateX(-50%);*/
-        /*-o-transform: translateX(-50%);*/
-        max-width: 600px;
-        /*width: 100%;*/
-    }
-    .learningAcademyHeader .headerText {
-        font-size: 16px;
-        line-height: 1.5;
-        display: inline-block;
-        color: #333;
-    }
 
-    #learningAcademyTabs {
-        position: fixed;
-        /*top: 56px;*/
-        left: 50%;
-        display: flex;
-        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
-        z-index: 1;
-        cursor: pointer;
-        background-color: #fff;
-        transform: translateX(-50%);
-        -webkit-transform: translateX(-50%);
-        -moz-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-        -o-transform: translateX(-50%);
-        max-width: 600px;
+    .tabs{
         width: 100%;
+        height: 56px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 2px;
     }
-    #learningAcademyTabs .learningAcademyTabItem {
-        font-size: 14px;
-        line-height: 16px;
+    .tab-item{
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         color: #999;
-        display: inline-block;
-        padding: 16px;
-        width: 50%;
-        text-align: center;
+        height: 100%;
     }
-    #learningAcademyTabs .ActiveTabItem {
-        color: #333;
-    }
-
-    #learningAcademyTabs:after {
-        width: 50%;
-        content: "";
-        clear: both;
-        bottom: 0;
-        display: block;
-        background-color: #fe4d9b;
-        height: 2px;
-        position: absolute;
+    .ActiveTabItem{
+        color: #00b0ff;
         transition: left 0.4s cubic-bezier(0.23, 1, 0.32, 1);
-        /*margin: 0 15px;*/
+        border-bottom: 2px solid #337ab7;
+
     }
+    /*.ActiveTabItem:after {*/
+        /*width: 50%;*/
+        /*content: "";*/
+        /*clear: both;*/
+        /*border-bottom: 2px;*/
+        /*display: block;*/
+        /*background-color: #fe4d9b;*/
+        /*height: 2px;*/
+        /*position: absolute;*/
+        /*transition: left 0.4s cubic-bezier(0.23, 1, 0.32, 1);*/
+        /*!*margin: 0 15px;*!*/
+    /*}*/
 
     .bottom-bar-index-0:after {
         left: 0%;
@@ -88,6 +59,7 @@
     .howToContentList {
         /*margin-top: 60px;*/
         /*padding-bottom: 10px;*/
+        display: none;
     }
     .howToContentList .howToContentItem {
         background-color: #fff;
@@ -132,23 +104,42 @@
         color: #999;
         margin-top: 4px;
     }
-    /*.learningAcademyHeader {*/
-    /*    padding: 16px;*/
-    /*    !*position: fixed;*!*/
-    /*    background-color: #fff;*/
-    /*    top: 0;*/
-    /*    left: 50%;*/
-    /*    z-index: 2;*/
-    /*    !*transform: translateX(-50%);*!*/
-    /*    max-width: 600px;*/
-    /*    !*width: 100%;*!*/
-    /*}*/
-        /*.learningAcademyHeader .headerText {*/
-    /*    font-size: 16px;*/
-    /*    line-height: 1.5;*/
-    /*    display: inline-block;*/
-    /*    color: #333;*/
-    /*}*/
+    .video-box{
+
+    }
+    .video-box .welcome-box{
+        background: rgba(207,232,252,1);
+    }
+    .video-box .welcome-box div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .video-box .welcome-box div:nth-child(1){
+
+        height: 48px;
+        font-size: 18px;
+    }
+    .video-box .welcome-box div:nth-child(2){
+        height: 48px;
+    }
+    .video-box .video-item .video-item-title{
+        height: 40px;
+        line-height: 40px;
+        font-size: 16px;
+    }
+    .video-box .video-item .video-item-play {
+        width: 100%;
+        /*height: 120px;*/
+    }
+    .video-box .video-item .video-item-play video{
+        width: 100%;
+        /*height: 120px;*/
+    }
+    .video-box .video-items{
+        padding: 8px;
+    }
+
 </style>
 <div style="display: flex;
     justify-content: center;
@@ -158,22 +149,130 @@
     position: absolute;
     z-index: 100000;
     margin: 0;"
-id="loading">
+     id="loading">
     <div id="circle" ></div>
 </div>
 
 
-<div id="afterLoading" style="display: none;height: 100%;margin: 8px;">
-    <div id="learningAcademyTabs" >
-        <div class="learningAcademyTabItem " id="TabItem1" class="ActiveTabItem">Must-See</div>
-        <div class="learningAcademyTabItem " id="TabItem2" >How-To</div>
+<div id="afterLoading" style="display: none;height: 100%;">
+    <div class="tabs" >
+        <a class="tab-item ActiveTabItem" id="tabItem1">Learning Centre</a>
+        <a class="tab-item " id="tabItem2" >FAQ</a>
 
     </div>
-    <div class="learningAcademyHeader">
-        <div class="headerText">Learn</div>
-        <div class="headerText">Learn</div>
+
+    <div class="video-box" >
+
+
+        <div class="welcome-box">
+            <div>
+                Welcome to Wemore Learning Centre
+
+            </div>
+            <div>
+                Watch videos and learn to use wemore
+            </div>
+        </div>
+        <div class="video-items">
+            <div class="video-item">
+                <div class="video-item-title">
+                    What is wemore?
+                </div>
+                <!--<div class="video-item-description">-->
+                <!--After completing every order,user will ask to review the product in these -->
+                <!--</div>-->
+                <div class="video-item-play">
+                    <video src="./video/video1.mp4" id="video-1" onplay="playVideo(1)" poster="./video/video1.jpg"  controls>
+
+                    </video>
+                </div>
+            </div>
+            <div class="video-item">
+                <div class="video-item-title">
+                    How to earn with wemore?
+                </div>
+                <!--<div class="video-item-description">-->
+                <!--After completing every order,user will ask to review the product in these -->
+                <!--</div>-->
+                <div class="video-item-play">
+                    <video src="./video/video2.mp4" id="video-2" onplay="playVideo(2)" poster="./video/video2.jpg" controls>
+
+                    </video>
+                </div>
+            </div>
+            <div class="video-item">
+                <div class="video-item-title">
+                    How to add margin and place order ?
+                </div>
+                <!--<div class="video-item-description">-->
+                <!--After completing every order,user will ask to review the product in these -->
+                <!--</div>-->
+                <div class="video-item-play">
+                    <video src="./video/video3.mp4" id="video-3" onplay="playVideo(3)" poster="./video/video3.jpg"  controls>
+
+                    </video>
+                </div>
+            </div>
+            <div class="video-item">
+                <div class="video-item-title">
+                    wemore Key Policies?
+                </div>
+                <!--<div class="video-item-description">-->
+                <!--After completing every order,user will ask to review the product in these -->
+                <!--</div>-->
+                <div class="video-item-play">
+                    <video src="./video/video4.mp4" id="video-4" onplay="playVideo(4)" poster="./video/video4.jpg"  controls>
+
+                    </video>
+                </div>
+            </div>
+            <div class="video-item">
+                <div class="video-item-title">
+                    How to receive margin?
+                </div>
+                <!--<div class="video-item-description">-->
+                <!--After completing every order,user will ask to review the product in these -->
+                <!--</div>-->
+                <div class="video-item-play">
+                    <video src="./video/video5.mp4" id="video-5" onplay="playVideo(5)" poster="./video/video5.jpg"  controls>
+
+                    </video>
+                </div>
+            </div>
+            <div class="video-item">
+                <div class="video-item-title">
+                    How to sign in with wemore?
+                </div>
+                <!--<div class="video-item-description">-->
+                <!--After completing every order,user will ask to review the product in these -->
+                <!--</div>-->
+                <div class="video-item-play">
+                    <video src="./video/video6.mp4" id="video-6" onplay="playVideo(6)" poster="./video/video6.jpg"  controls>
+
+                    </video>
+                </div>
+            </div>
+            <div class="video-item">
+                <div class="video-item-title">
+                    How to browse products on wemore?
+                </div>
+                <!--<div class="video-item-description">-->
+                <!--After completing every order,user will ask to review the product in these -->
+                <!--</div>-->
+                <div class="video-item-play">
+                    <video src="./video/video7.mp4" id="video-7" onplay="playVideo(7)" poster="./video/video7.jpg"  controls>
+
+                    </video>
+                </div>
+            </div>
+
+
+        </div>
+
+
 
     </div>
+
     <div class="howToContentList" >
         <a class="howToContentItem" onclick="jumpToSecond('getStart')">
             <div class="howToContentImg">
@@ -289,141 +388,44 @@ id="loading">
         </a>
 
     </div>
-
-    <div class="howToContentList" >
-        <a class="howToContentItem" onclick="jumpToSecond('getStart')">
-            <div class="howToContentImg">
-                <img src="./image/get-your-first-order.png">
-            </div>
-            <div class="howToContentBox">
-                <div class="howToContentText textEllipsis">
-                    Getting started
-                </div>
-                <div class="howToContentSubtext textEllipsis">Get your first order</div>
-            </div>
-        </a>
-<!--        <a class="howToContentItem" onclick="jumpToSecond('findMoreCustomer')">-->
-<!--            <div class="howToContentImg">-->
-<!--                <img src="./image/find-more-customers.png">-->
-<!--            </div>-->
-<!--            <div class="howToContentBox">-->
-<!--                <div class="howToContentText textEllipsis">-->
-<!--                    Discover products-->
-<!--                </div>-->
-<!--                <div class="howToContentSubtext textEllipsis">Learn to sell over social media</div>-->
-<!--            </div>-->
-<!--        </a>-->
-        <a class="howToContentItem" onclick="jumpToSecond('findProductsToShare')">
-            <div class="howToContentImg">
-                <img src="./image/find-products-to-share.png">
-            </div>
-            <div class="howToContentBox">
-                <div class="howToContentText textEllipsis">
-                    Find products to share
-                </div>
-                <div class="howToContentSubtext textEllipsis">Understand what products can be sold easily</div>
-            </div>
-        </a>
-        <a class="howToContentItem" onclick="jumpToSecond('DiscoverProducts')">
-            <div class="howToContentImg">
-                <img src="./image/find-more-customers.png">
-            </div>
-            <div class="howToContentBox">
-                <div class="howToContentText textEllipsis">
-                    Discover products
-                </div>
-                <div class="howToContentSubtext textEllipsis">Learn how to sell on social media</div>
-            </div>
-        </a>
-<!--        <a class="howToContentItem" onclick="jumpToSecond('SocialMedia')">-->
-<!--            <div class="howToContentImg">-->
-<!--                <img src="./image/social-whatsapp.png">-->
-<!--            </div>-->
-<!--            <div class="howToContentBox">-->
-<!--                <div class="howToContentText textEllipsis">-->
-<!--                    Use social media-->
-<!--                </div>-->
-<!--                <div class="howToContentSubtext textEllipsis">Use social media</div>-->
-<!--            </div>-->
-<!--        </a>-->
-        <a class="howToContentItem" onclick="jumpToSecond('manageOrdersDelivery')">
-            <div class="howToContentImg">
-                <img src="./image/manage-orders-and-delivery.png">
-            </div>
-            <div class="howToContentBox">
-                <div class="howToContentText textEllipsis">
-                    Manage orders and delivery
-                </div>
-                <div class="howToContentSubtext textEllipsis">Learn how to manage your orders and delivery</div>
-            </div>
-        </a>
-<!--        <a class="howToContentItem" onclick="jumpToSecond('makePayments')">-->
-<!--            <div class="howToContentImg">-->
-<!--                <img src="./image/make-payments.png">-->
-<!--            </div>-->
-<!--            <div class="howToContentBox">-->
-<!--                <div class="howToContentText textEllipsis">-->
-<!--                    Margin-->
-<!--                </div>-->
-<!--                <div class="howToContentSubtext textEllipsis">All about making payments</div>-->
-<!--            </div>-->
-<!--        </a>-->
-        <a class="howToContentItem" onclick="jumpToSecond('trackMarginBonus')">
-            <div class="howToContentImg">
-                <img src="./image/track-margin-and-bonus.png">
-            </div>
-            <div class="howToContentBox">
-                <div class="howToContentText textEllipsis">
-                    Margins
-                </div>
-                <div class="howToContentSubtext textEllipsis">Everything you need to know about margin</div>
-            </div>
-        </a>
-        <a class="howToContentItem" onclick="jumpToSecond('returnOrExchange')">
-            <div class="howToContentImg">
-                <img src="./image/return-or-exchange.png">
-            </div>
-            <div class="howToContentBox">
-                <div class="howToContentText textEllipsis">
-                    Cancellation, returns and refunds
-                </div>
-                <div class="howToContentSubtext textEllipsis">How cancel orders and claim refund</div>
-            </div>
-        </a>
-
-
-        <a class="howToContentItem" onclick="jumpToSecond('manageAccountsSettings')">
-            <div class="howToContentImg">
-                <img src="./image/manage-accounts-and-settings.png">
-            </div>
-            <div class="howToContentBox">
-                <div class="howToContentText textEllipsis">
-                    Manage accounts and settings
-                </div>
-                <div class="howToContentSubtext textEllipsis">Manage accounts and settings</div>
-            </div>
-        </a>
-
-    </div>
 </div>
 <script type="application/javascript" src="./loading/loading.js"></script>
 
 <script>
-    window.onload = function () {
+    window.onload= function () {
         document.querySelector('#loading').style.display = 'none'
         document.querySelector('#afterLoading').style.display = 'block'
         refresh()
-        document.querySelector('#TabItem1').onclick = function (v) {
-                console.log(v)
-            v.className.add('ActiveTabItem')
-            document.querySelector('#TabItem2').classList.remove('ActiveTabItem')
+        document.querySelector('#tabItem1').onclick = function (v) {
+            console.log(v.target)
+            v.target.classList.add('ActiveTabItem')
+            document.querySelector('#tabItem2').classList.remove('ActiveTabItem')
+            document.querySelector('.video-box').style.display = 'block'
+            document.querySelector('.howToContentList').style.display = 'none'
         }
-        document.querySelector()
+        document.querySelector('#tabItem2').onclick = function (v) {
+            // console.log(v.target)
+            document.querySelector('#tabItem2').classList.add('ActiveTabItem')
+            document.querySelector('#tabItem1').classList.remove('ActiveTabItem')
+            document.querySelector('.howToContentList').style.display = 'block'
+            document.querySelector('.video-box').style.display = 'none'
+
+        }
     }
     function jumpToSecond(page) {
         console.log(page)
         console.log(window.location)
         window.location.href = `${window.location.origin}${window.location.pathname}list/index.html?page=${page}`
+    }
+    function playVideo(index) {
+        for(let i=1;i<8;i++){
+            console.log(index,i)
+            if (i !== index) {
+                console.log(                document.querySelector(`#video-${i}`)
+                )
+                document.querySelector(`#video-${i}`).pause()
+            }
+        }
     }
 </script>
 </body>
