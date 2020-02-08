@@ -18,7 +18,10 @@
       <change afterPath="$PROJECT_DIR$/faq/video/video7.jpg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/faq/video/video7.mp4" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/faq/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/faq/index.html" afterDir="false" />
+=======
+>>>>>>> master
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -32,6 +35,7 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/faq/index.html">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="441">
               <caret line="262" column="109" selection-start-line="262" selection-start-column="109" selection-end-line="262" selection-end-column="109" />
               <folding>
@@ -41,6 +45,11 @@
                 <element signature="e#2054#2149#0" />
                 <element signature="e#2225#2305#0" />
                 <element signature="e#2384#2489#0" />
+=======
+            <state relative-caret-position="175">
+              <caret line="258" column="65" selection-start-line="258" selection-start-column="59" selection-end-line="258" selection-end-column="65" />
+              <folding>
+>>>>>>> master
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -84,6 +93,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+<<<<<<< HEAD
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -91,6 +101,8 @@
       </list>
     </option>
   </component>
+=======
+>>>>>>> master
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsGulpfileManager">
@@ -113,7 +125,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+<<<<<<< HEAD
       <pane id="Scope" />
+=======
+>>>>>>> master
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -126,31 +141,42 @@
               <item name="html" type="462c0819:PsiDirectoryNode" />
               <item name="faq" type="462c0819:PsiDirectoryNode" />
             </path>
+<<<<<<< HEAD
             <path>
               <item name="html" type="b2602c69:ProjectViewProjectNode" />
               <item name="html" type="462c0819:PsiDirectoryNode" />
               <item name="faq" type="462c0819:PsiDirectoryNode" />
               <item name="video" type="462c0819:PsiDirectoryNode" />
             </path>
+=======
+>>>>>>> master
           </expand>
           <select />
         </subPane>
       </pane>
+<<<<<<< HEAD
+=======
+      <pane id="Scope" />
+>>>>>>> master
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/faq/image" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+<<<<<<< HEAD
       <recent name="E:\nginx-1.16.0\html\faq\video" />
       <recent name="E:\nginx-1.16.0\html\faq" />
+=======
+      <recent name="D:\HistoryFile\nginx-1.16.0\html\faq\image" />
+>>>>>>> master
     </key>
   </component>
   <component name="RunDashboard">
@@ -183,17 +209,30 @@
       <workItem from="1569464916550" duration="15684000" />
       <workItem from="1571016213678" duration="6497000" />
       <workItem from="1577675669304" duration="1457000" />
+<<<<<<< HEAD
       <workItem from="1579428963183" duration="2875000" />
       <workItem from="1580793415958" duration="2844000" />
       <workItem from="1580796746049" duration="16796000" />
+=======
+      <workItem from="1579428963183" duration="300000" />
+      <workItem from="1580863731289" duration="615000" />
+>>>>>>> master
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="19640000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+=======
+    <option name="totallyTimeSpent" value="939000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
+>>>>>>> master
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -242,6 +281,7 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/faq/index.html">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="442">
           <caret line="26" column="28" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
           <folding>
@@ -251,6 +291,10 @@
             <element signature="e#2054#2149#0" />
             <element signature="e#2225#2305#0" />
             <element signature="e#2384#2489#0" />
+=======
+        <state relative-caret-position="3757">
+          <caret line="228" column="18" lean-forward="true" selection-start-line="228" selection-start-column="18" selection-end-line="228" selection-end-column="18" />
+          <folding>
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
@@ -266,6 +310,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/faq/index.html">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="28" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
+          <folding>
+>>>>>>> master
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/faq/loading/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="30" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/faq/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="441">
           <caret line="262" column="109" selection-start-line="262" selection-start-column="109" selection-end-line="262" selection-end-column="109" />
           <folding>
@@ -275,6 +339,11 @@
             <element signature="e#2054#2149#0" />
             <element signature="e#2225#2305#0" />
             <element signature="e#2384#2489#0" />
+=======
+        <state relative-caret-position="175">
+          <caret line="258" column="65" selection-start-line="258" selection-start-column="59" selection-end-line="258" selection-end-column="65" />
+          <folding>
+>>>>>>> master
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>

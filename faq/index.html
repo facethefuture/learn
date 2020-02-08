@@ -84,6 +84,13 @@
         vertical-align: middle;
         display: inline-block;
     }
+    .blogs-box .howToContentItem .howToContentImg img {
+        width: 64px;
+        height: 64px;
+        max-width: 100%;
+        vertical-align: middle;
+        display: inline-block;
+    }
     .howToContentList .howToContentItem .howToContentBox {
         display: block;
         padding-left: 72px;
@@ -139,6 +146,9 @@
     .video-box .video-items{
         padding: 8px;
     }
+    .blogs-box{
+        display: none;
+    }
 
 </style>
 <div style="display: flex;
@@ -158,6 +168,8 @@
     <div class="tabs" >
         <a class="tab-item ActiveTabItem" id="tabItem1">Learning Centre</a>
         <a class="tab-item " id="tabItem2" >FAQ</a>
+        <a class="tab-item " id="tabItem3" >Blogs</a>
+
 
     </div>
 
@@ -362,6 +374,17 @@
                 <div class="howToContentSubtext textEllipsis">Everything you need to know about margin</div>
             </div>
         </a>
+        <a class="howToContentItem" onclick="jumpToSecond('wallet')">
+            <div class="howToContentImg">
+                <img src="./image/learn_wallet.png">
+            </div>
+            <div class="howToContentBox">
+                <div class="howToContentText textEllipsis">
+                    Wallet
+                </div>
+                <div class="howToContentSubtext textEllipsis">wallet</div>
+            </div>
+        </a>
         <a class="howToContentItem" onclick="jumpToSecond('returnOrExchange')">
             <div class="howToContentImg">
                 <img src="./image/return-or-exchange.png">
@@ -388,6 +411,133 @@
         </a>
 
     </div>
+    <div class="howToContentList blogs-box" >
+        <a class="howToContentItem" onclick="jumpToSecond('getStart')">
+            <div class="howToContentImg">
+                <img src="https://www.wemore.in/images/blog/30.webp">
+            </div>
+            <div class="howToContentBox">
+                <div class="howToContentText ">
+                    Jyamuna Loves to Resell - Know Her Reselling Journey
+                </div>
+                <div class="howToContentSubtext textEllipsis">Jan 30, 2020</div>
+            </div>
+        </a>
+        <!--        <a class="howToContentItem" onclick="jumpToSecond('findMoreCustomer')">-->
+        <!--            <div class="howToContentImg">-->
+        <!--                <img src="./image/find-more-customers.png">-->
+        <!--            </div>-->
+        <!--            <div class="howToContentBox">-->
+        <!--                <div class="howToContentText textEllipsis">-->
+        <!--                    Discover products-->
+        <!--                </div>-->
+        <!--                <div class="howToContentSubtext textEllipsis">Learn to sell over social media</div>-->
+        <!--            </div>-->
+        <!--        </a>-->
+        <a class="howToContentItem" onclick="jumpToSecond('findProductsToShare')">
+            <div class="howToContentImg">
+                <img src="./image/find-products-to-share.png">
+            </div>
+            <div class="howToContentBox">
+                <div class="howToContentText textEllipsis">
+                    Find products to share
+                </div>
+                <div class="howToContentSubtext textEllipsis">Understand what products can be sold easily</div>
+            </div>
+        </a>
+        <a class="howToContentItem" onclick="jumpToSecond('DiscoverProducts')">
+            <div class="howToContentImg">
+                <img src="./image/find-more-customers.png">
+            </div>
+            <div class="howToContentBox">
+                <div class="howToContentText textEllipsis">
+                    Discover products
+                </div>
+                <div class="howToContentSubtext textEllipsis">Learn how to sell on social media</div>
+            </div>
+        </a>
+        <!--        <a class="howToContentItem" onclick="jumpToSecond('SocialMedia')">-->
+        <!--            <div class="howToContentImg">-->
+        <!--                <img src="./image/social-whatsapp.png">-->
+        <!--            </div>-->
+        <!--            <div class="howToContentBox">-->
+        <!--                <div class="howToContentText textEllipsis">-->
+        <!--                    Use social media-->
+        <!--                </div>-->
+        <!--                <div class="howToContentSubtext textEllipsis">Use social media</div>-->
+        <!--            </div>-->
+        <!--        </a>-->
+        <a class="howToContentItem" onclick="jumpToSecond('manageOrdersDelivery')">
+            <div class="howToContentImg">
+                <img src="./image/manage-orders-and-delivery.png">
+            </div>
+            <div class="howToContentBox">
+                <div class="howToContentText textEllipsis">
+                    Manage orders and delivery
+                </div>
+                <div class="howToContentSubtext textEllipsis">Learn how to manage your orders and delivery</div>
+            </div>
+        </a>
+        <!--        <a class="howToContentItem" onclick="jumpToSecond('makePayments')">-->
+        <!--            <div class="howToContentImg">-->
+        <!--                <img src="./image/make-payments.png">-->
+        <!--            </div>-->
+        <!--            <div class="howToContentBox">-->
+        <!--                <div class="howToContentText textEllipsis">-->
+        <!--                    Margin-->
+        <!--                </div>-->
+        <!--                <div class="howToContentSubtext textEllipsis">All about making payments</div>-->
+        <!--            </div>-->
+        <!--        </a>-->
+        <a class="howToContentItem" onclick="jumpToSecond('trackMarginBonus')">
+            <div class="howToContentImg">
+                <img src="./image/track-margin-and-bonus.png">
+            </div>
+            <div class="howToContentBox">
+                <div class="howToContentText textEllipsis">
+                    Margins
+                </div>
+                <div class="howToContentSubtext textEllipsis">Everything you need to know about margin</div>
+            </div>
+        </a>
+        <a class="howToContentItem" onclick="jumpToSecond('wallet')">
+            <div class="howToContentImg">
+                <img src="./image/learn_wallet.png">
+            </div>
+            <div class="howToContentBox">
+                <div class="howToContentText textEllipsis">
+                    Wallet
+                </div>
+                <div class="howToContentSubtext textEllipsis">wallet</div>
+            </div>
+        </a>
+        <a class="howToContentItem" onclick="jumpToSecond('returnOrExchange')">
+            <div class="howToContentImg">
+                <img src="./image/return-or-exchange.png">
+            </div>
+            <div class="howToContentBox">
+                <div class="howToContentText textEllipsis">
+                    Cancellation, returns and refunds
+                </div>
+                <div class="howToContentSubtext textEllipsis">How cancel orders and claim refund</div>
+            </div>
+        </a>
+
+
+        <a class="howToContentItem" onclick="jumpToSecond('manageAccountsSettings')">
+            <div class="howToContentImg">
+                <img src="./image/manage-accounts-and-settings.png">
+            </div>
+            <div class="howToContentBox">
+                <div class="howToContentText textEllipsis">
+                    Manage accounts and settings
+                </div>
+                <div class="howToContentSubtext textEllipsis">Manage accounts and settings</div>
+            </div>
+        </a>
+
+    </div>
+
 </div>
 <script type="application/javascript" src="./loading/loading.js"></script>
 
@@ -396,20 +546,63 @@
         document.querySelector('#loading').style.display = 'none'
         document.querySelector('#afterLoading').style.display = 'block'
         refresh()
+        console.log(localStorage.getItem('activeIndex'))
+        if (localStorage.getItem('activeIndex') === '2') {
+            document.querySelector('#tabItem2').classList.add('ActiveTabItem')
+            document.querySelector('#tabItem1').classList.remove('ActiveTabItem')
+            document.querySelector('#tabItem3').classList.remove('ActiveTabItem')
+
+            document.querySelector('.howToContentList').style.display = 'block'
+            document.querySelector('.video-box').style.display = 'none'
+            document.querySelector('.blogs-box').style.display = 'none'
+
+        } else if (localStorage.getItem('activeIndex') === '3') {
+            document.querySelector('#tabItem3').classList.add('ActiveTabItem')
+            document.querySelector('#tabItem1').classList.remove('ActiveTabItem')
+            document.querySelector('#tabItem2').classList.remove('ActiveTabItem')
+
+            document.querySelector('.blogs-box').style.display = 'block'
+            document.querySelector('.video-box').style.display = 'none'
+            document.querySelector('.howToContentList').style.display = 'none'
+
+        }
         document.querySelector('#tabItem1').onclick = function (v) {
             console.log(v.target)
             v.target.classList.add('ActiveTabItem')
             document.querySelector('#tabItem2').classList.remove('ActiveTabItem')
+            document.querySelector('#tabItem3').classList.remove('ActiveTabItem')
+
             document.querySelector('.video-box').style.display = 'block'
             document.querySelector('.howToContentList').style.display = 'none'
+            document.querySelector('.blogs-box').style.display = 'none'
+
+            localStorage.setItem('activeIndex','1')
         }
         document.querySelector('#tabItem2').onclick = function (v) {
             // console.log(v.target)
             document.querySelector('#tabItem2').classList.add('ActiveTabItem')
             document.querySelector('#tabItem1').classList.remove('ActiveTabItem')
+            document.querySelector('#tabItem3').classList.remove('ActiveTabItem')
+
             document.querySelector('.howToContentList').style.display = 'block'
             document.querySelector('.video-box').style.display = 'none'
+            document.querySelector('.blogs-box').style.display = 'none'
 
+            localStorage.setItem('activeIndex','2')
+            pauseVideo()
+        }
+        document.querySelector('#tabItem3').onclick = function (v) {
+            // console.log(v.target)
+            document.querySelector('#tabItem3').classList.add('ActiveTabItem')
+            document.querySelector('#tabItem1').classList.remove('ActiveTabItem')
+            document.querySelector('#tabItem2').classList.remove('ActiveTabItem')
+
+            document.querySelector('.blogs-box').style.display = 'block'
+            document.querySelector('.video-box').style.display = 'none'
+            document.querySelector('.howToContentList').style.display = 'none'
+
+            localStorage.setItem('activeIndex','3')
+            pauseVideo()
         }
     }
     function jumpToSecond(page) {
@@ -425,6 +618,12 @@
                 )
                 document.querySelector(`#video-${i}`).pause()
             }
+        }
+    }
+    function pauseVideo(){
+        for(let i=1;i<8;i++){
+            document.querySelector(`#video-${i}`).pause()
+
         }
     }
 </script>

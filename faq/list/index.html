@@ -620,6 +620,27 @@
                 ]
                 addDOM(this.list)
                 break
+            case 'wallet':
+                // this.secondTitle = 'Payment '
+                document.querySelector('#secondTitle').innerHTML = 'Wallet'
+
+                this.list = [
+                    {
+                        title: 'Wallet',
+                        aList: [
+                            {label: 'How can I earn money on my Wemore wallet?',value: '150'},
+                            {label: 'What can I use my Wemore wallet balance for? ', value: '151'},
+                            {label: 'When will the amount be credited to my wallet?',value: '152'},
+                            {label: 'Will the money I used from my wallet be refunded if the order is cancelled?',value: '153'},
+                            {label: 'How much money from Wemore wallet can I use for a single order?',value: '154'},
+
+                        ]
+                    },
+
+                ]
+                addDOM(this.list)
+                break
+
 
         }
         // console.log(this.list)
