@@ -33,6 +33,7 @@
         color: #00b0ff;
         transition: left 0.4s cubic-bezier(0.23, 1, 0.32, 1);
         border-bottom: 2px solid #337ab7;
+
     }
     /*.ActiveTabItem:after {*/
         /*width: 50%;*/
@@ -58,7 +59,6 @@
     .howToContentList {
         /*margin-top: 60px;*/
         /*padding-bottom: 10px;*/
-        display: none;
     }
     .howToContentList .howToContentItem {
         background-color: #fff;
@@ -165,124 +165,13 @@
 
 <div id="afterLoading" style="display: none;height: 100%;">
     <div class="tabs" >
-        <a class="tab-item ActiveTabItem" id="tabItem1">Learning Centre</a>
-        <a class="tab-item " id="tabItem2" >FAQ</a>
+        <a class="tab-item " id="tabItem1">Learning Centre</a>
+        <a class="tab-item ActiveTabItem" id="tabItem2" >FAQ</a>
         <a class="tab-item " id="tabItem3" >Blogs</a>
 
 
     </div>
 
-    <div class="video-box" >
-
-
-        <div class="welcome-box">
-            <div>
-                Welcome to Wemore Learning Centre
-
-            </div>
-            <div>
-                Watch videos and learn to use wemore
-            </div>
-        </div>
-        <div class="video-items">
-            <div class="video-item">
-                <div class="video-item-title">
-                    What is wemore?
-                </div>
-                <!--<div class="video-item-description">-->
-                <!--After completing every order,user will ask to review the product in these -->
-                <!--</div>-->
-                <div class="video-item-play">
-                    <video src="./video/video1.mp4" id="video-1" onplay="playVideo(1)" poster="./video/video1.jpg"  controls>
-
-                    </video>
-                </div>
-            </div>
-            <div class="video-item">
-                <div class="video-item-title">
-                    How to earn with wemore?
-                </div>
-                <!--<div class="video-item-description">-->
-                <!--After completing every order,user will ask to review the product in these -->
-                <!--</div>-->
-                <div class="video-item-play">
-                    <video src="./video/video2.mp4" id="video-2" onplay="playVideo(2)" poster="./video/video2.jpg" controls>
-
-                    </video>
-                </div>
-            </div>
-            <div class="video-item">
-                <div class="video-item-title">
-                    How to add margin and place order ?
-                </div>
-                <!--<div class="video-item-description">-->
-                <!--After completing every order,user will ask to review the product in these -->
-                <!--</div>-->
-                <div class="video-item-play">
-                    <video src="./video/video3.mp4" id="video-3" onplay="playVideo(3)" poster="./video/video3.jpg"  controls>
-
-                    </video>
-                </div>
-            </div>
-            <div class="video-item">
-                <div class="video-item-title">
-                    wemore Key Policies?
-                </div>
-                <!--<div class="video-item-description">-->
-                <!--After completing every order,user will ask to review the product in these -->
-                <!--</div>-->
-                <div class="video-item-play">
-                    <video src="./video/video4.mp4" id="video-4" onplay="playVideo(4)" poster="./video/video4.jpg"  controls>
-
-                    </video>
-                </div>
-            </div>
-            <div class="video-item">
-                <div class="video-item-title">
-                    How to receive margin?
-                </div>
-                <!--<div class="video-item-description">-->
-                <!--After completing every order,user will ask to review the product in these -->
-                <!--</div>-->
-                <div class="video-item-play">
-                    <video src="./video/video5.mp4" id="video-5" onplay="playVideo(5)" poster="./video/video5.jpg"  controls>
-
-                    </video>
-                </div>
-            </div>
-            <div class="video-item">
-                <div class="video-item-title">
-                    How to sign in with wemore?
-                </div>
-                <!--<div class="video-item-description">-->
-                <!--After completing every order,user will ask to review the product in these -->
-                <!--</div>-->
-                <div class="video-item-play">
-                    <video src="./video/video6.mp4" id="video-6" onplay="playVideo(6)" poster="./video/video6.jpg"  controls>
-
-                    </video>
-                </div>
-            </div>
-            <div class="video-item">
-                <div class="video-item-title">
-                    How to browse products on wemore?
-                </div>
-                <!--<div class="video-item-description">-->
-                <!--After completing every order,user will ask to review the product in these -->
-                <!--</div>-->
-                <div class="video-item-play">
-                    <video src="./video/video7.mp4" id="video-7" onplay="playVideo(7)" poster="./video/video7.jpg"  controls>
-
-                    </video>
-                </div>
-            </div>
-
-
-        </div>
-
-
-
-    </div>
 
     <div class="howToContentList" >
         <a class="howToContentItem" onclick="jumpToSecond('getStart')">
@@ -546,7 +435,7 @@
         document.querySelector('#afterLoading').style.display = 'block'
         refresh()
         clickTab()
-
+        // console.log(localStorage.getItem('activeIndex'))
         // if (localStorage.getItem('activeIndex') === '2') {
         //     document.querySelector('#tabItem2').classList.add('ActiveTabItem')
         //     document.querySelector('#tabItem1').classList.remove('ActiveTabItem')
@@ -608,7 +497,7 @@
     function jumpToSecond(page) {
         console.log(page)
         console.log(window.location)
-        window.location.href = `${window.location.origin}${window.location.pathname}list/index.html?page=${page}`
+        window.location.href = `${window.location.origin}/faq/list/index.html?page=${page}`
     }
     function playVideo(index) {
         for(let i=1;i<8;i++){

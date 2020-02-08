@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0,user-scalable=no">
+    <link rel="stylesheet" href="./loading/style.css">
+    <title>Learn</title>
+</head>
+<body>
+<style>
+    html,body{
+        height: 100%;
+        margin: 0;
+    }
+
+    .tabs{
+        width: 100%;
+        height: 56px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 2px;
+    }
+    .tab-item{
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #999;
+        height: 100%;
+    }
+    .ActiveTabItem{
+        color: #00b0ff;
+        transition: left 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+        border-bottom: 2px solid #337ab7;
+
+    }
+    /*.ActiveTabItem:after {*/
+        /*width: 50%;*/
+        /*content: "";*/
+        /*clear: both;*/
+        /*border-bottom: 2px;*/
+        /*display: block;*/
+        /*background-color: #fe4d9b;*/
+        /*height: 2px;*/
+        /*position: absolute;*/
+        /*transition: left 0.4s cubic-bezier(0.23, 1, 0.32, 1);*/
+        /*!*margin: 0 15px;*!*/
+    /*}*/
+
+    .bottom-bar-index-0:after {
+        left: 0%;
+    }
+
+    .bottom-bar-index-1:after {
+        left: 50%;
+    }
+
+    .howToContentList {
+        /*margin-top: 60px;*/
+        /*padding-bottom: 10px;*/
+        /*display: none;*/
+    }
+    .howToContentList .howToContentItem {
+        background-color: #fff;
+        margin-bottom: 16px;
+        padding: 16px;
+        display: block;
+        position: relative;
+        box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.05);
+        text-decoration: none !important;
+        color: #337ab7;
+        cursor: pointer;
+    }
+    .howToContentList .howToContentItem .howToContentImg {
+        position: absolute;
+        top: 16px;
+        left: 16px;
+    }
+    .howToContentList .howToContentItem .howToContentImg img {
+        width: 64px;
+        height: 64px;
+        /*margin-right: 24px;*/
+        max-width: 100%;
+        vertical-align: middle;
+        display: inline-block;
+    }
+    .blogs-box .howToContentItem .howToContentImg img {
+        width: 64px;
+        height: 64px;
+        max-width: 100%;
+        vertical-align: middle;
+        display: inline-block;
+    }
+    .howToContentList .howToContentItem .howToContentBox {
+        display: block;
+        padding-left: 72px;
+    }
+    .howToContentList .howToContentItem .howToContentBox .textEllipsis {
+        /*white-space: nowrap;*/
+        /*overflow: hidden;*/
+        /*text-overflow: ellipsis;*/
+    }
+    .howToContentList .howToContentItem .howToContentBox .howToContentText {
+        font-size: 14px;
+        line-height: 24px;
+        color: #333;
+    }
+    .howToContentList .howToContentItem .howToContentBox .howToContentSubtext {
+        font-size: 12px;
+        line-height: 1.33;
+        color: #999;
+        margin-top: 4px;
+    }
+    .video-box{
+
+    }
+    .video-box .welcome-box{
+        background: rgba(207,232,252,1);
+    }
+    .video-box .welcome-box div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .video-box .welcome-box div:nth-child(1){
+
+        height: 48px;
+        font-size: 18px;
+    }
+    .video-box .welcome-box div:nth-child(2){
+        height: 48px;
+    }
+    .video-box .video-item .video-item-title{
+        height: 40px;
+        line-height: 40px;
+        font-size: 16px;
+    }
+    .video-box .video-item .video-item-play {
+        width: 100%;
+        /*height: 120px;*/
+    }
+    .video-box .video-item .video-item-play video{
+        width: 100%;
+        /*height: 120px;*/
+    }
+    .video-box .video-items{
+        padding: 8px;
+    }
+    .blogs-box{
+    }
+
+</style>
+<div style="display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 100000;
+    margin: 0;"
+     id="loading">
+    <div id="circle" ></div>
+</div>
+
+
+<div id="afterLoading" style="display: none;height: 100%;">
+    <div class="tabs" >
+        <a class="tab-item " id="tabItem1">Learning Centre</a>
+        <a class="tab-item " id="tabItem2" >FAQ</a>
+        <a class="tab-item ActiveTabItem" id="tabItem3" >Blogs</a>
+
+
+    </div>
+
+    <div class="howToContentList" >
+        <a class="howToContentItem" onclick="jumpToSecond(13)">
+            <div class="howToContentImg">
+                <img src="https://www.wemore.in/images/blog/30.webp">
+            </div>
+            <div class="howToContentBox">
+                <div class="howToContentText ">
+                    Jyamuna Loves to Resell - Know Her Reselling Journey
+                </div>
+                <div class="howToContentSubtext textEllipsis">Jan 30, 2020</div>
+            </div>
+        </a>
+        <!--        <a class="howToContentItem" onclick="jumpToSecond('findMoreCustomer')">-->
+        <!--            <div class="howToContentImg">-->
+        <!--                <img src="./image/find-more-customers.png">-->
+        <!--            </div>-->
+        <!--            <div class="howToContentBox">-->
+        <!--                <div class="howToContentText textEllipsis">-->
+        <!--                    Discover products-->
+        <!--                </div>-->
+        <!--                <div class="howToContentSubtext textEllipsis">Learn to sell over social media</div>-->
+        <!--            </div>-->
+        <!--        </a>-->
+        <a class="howToContentItem" onclick="jumpToSecond(12)">
+            <div class="howToContentImg">
+                <img src="https://www.wemore.in/images/blog/25.webp">
+
+            </div>
+            <div class="howToContentBox">
+                <div class="howToContentText textEllipsis">
+                    How to Get More Customers on Facebook?
+                </div>
+                <div class="howToContentSubtext textEllipsis">Jan 28, 2020</div>
+            </div>
+        </a>
+        <a class="howToContentItem" onclick="jumpToSecond(11)">
+            <div class="howToContentImg">
+                <img src="https://www.wemore.in/images/blog/24.webp">
+            </div>
+            <div class="howToContentBox">
+                <div class="howToContentText textEllipsis">
+                    3 wemore Margin Policies You Need to Know
+                </div>
+                <div class="howToContentSubtext textEllipsis">Jan 27, 2020</div>
+            </div>
+        </a>
+        <!--        <a class="howToContentItem" onclick="jumpToSecond('SocialMedia')">-->
+        <!--            <div class="howToContentImg">-->
+        <!--                <img src="./image/social-whatsapp.png">-->
+        <!--            </div>-->
+        <!--            <div class="howToContentBox">-->
+        <!--                <div class="howToContentText textEllipsis">-->
+        <!--                    Use social media-->
+        <!--                </div>-->
+        <!--                <div class="howToContentSubtext textEllipsis">Use social media</div>-->
+        <!--            </div>-->
+        <!--        </a>-->
+        <a class="howToContentItem" onclick="jumpToSecond(10)">
+            <div class="howToContentImg">
+                <img src="https://www.wemore.in/images/blog/22.webp">
+            </div>
+            <div class="howToContentBox">
+                <div class="howToContentText textEllipsis">
+                    Top 5 Trending Men’s Wear and Accessories on wemore
+                </div>
+                <div class="howToContentSubtext textEllipsis">Jan 25, 2020</div>
+            </div>
+        </a>
+        <a class="howToContentItem" onclick="jumpToSecond(9)">
+            <div class="howToContentImg">
+                <img src="https://www.wemore.in/images/blog/21.webp">
+            </div>
+            <div class="howToContentBox">
+                <div class="howToContentText textEllipsis">
+                    5 Best Practices to be a #CustomerFriendlyReseller on wemore
+                </div>
+                <div class="howToContentSubtext textEllipsis">Jan 23, 2020</div>
+            </div>
+        </a>
+        <!--        <a class="howToContentItem" onclick="jumpToSecond('makePayments')">-->
+        <!--            <div class="howToContentImg">-->
+        <!--                <img src="./image/make-payments.png">-->
+        <!--            </div>-->
+        <!--            <div class="howToContentBox">-->
+        <!--                <div class="howToContentText textEllipsis">-->
+        <!--                    Margin-->
+        <!--                </div>-->
+        <!--                <div class="howToContentSubtext textEllipsis">All about making payments</div>-->
+        <!--            </div>-->
+        <!--        </a>-->
+        <a class="howToContentItem" onclick="jumpToSecond(8)">
+            <div class="howToContentImg">
+                <img src="https://www.wemore.in/images/blog/20.webp">
+
+            </div>
+            <div class="howToContentBox">
+                <div class="howToContentText textEllipsis">
+                    5 Common #ResellingMistakes to Avoid Completely
+                </div>
+                <div class="howToContentSubtext textEllipsis">Jan 20, 2020</div>
+            </div>
+        </a>
+        <a class="howToContentItem" onclick="jumpToSecond(7)">
+            <div class="howToContentImg">
+                <img src="https://www.wemore.in/images/blog/19.webp">
+            </div>
+            <div class="howToContentBox">
+                <div class="howToContentText textEllipsis">
+                    An Open Chat with Sanchit, Category Manager on Sharing Catalogs on WhatsApp
+                </div>
+                <div class="howToContentSubtext textEllipsis">Jan 18, 2020</div>
+            </div>
+        </a>
+        <a class="howToContentItem" onclick="jumpToSecond(6)">
+            <div class="howToContentImg">
+                <img src="https://www.wemore.in/images/blog/15.webp">
+
+            </div>
+            <div class="howToContentBox">
+                <div class="howToContentText textEllipsis">
+                    Looking for a 100% Safe Reselling Experience? - Check Out 'wemore'
+                </div>
+                <div class="howToContentSubtext textEllipsis">Jan 16, 2020</div>
+            </div>
+        </a>
+
+
+        <a class="howToContentItem" onclick="jumpToSecond(5)">
+            <div class="howToContentImg">
+                <img src="https://www.wemore.in/images/blog/14.webp">
+            </div>
+            <div class="howToContentBox">
+                <div class="howToContentText textEllipsis">
+                    It Takes Two Hours to Earn and be an Entrepreneur #LifeOfReseller
+                </div>
+                <div class="howToContentSubtext textEllipsis">Jan 10, 2020</div>
+            </div>
+        </a>
+
+        <a class="howToContentItem" onclick="jumpToSecond(4)">
+            <div class="howToContentImg">
+                <img src="https://www.wemore.in/images/blog/10.webp">
+            </div>
+            <div class="howToContentBox">
+                <div class="howToContentText textEllipsis">
+                    Earn more and grow more with wemore!
+                </div>
+                <div class="howToContentSubtext textEllipsis">Jan 07, 2020</div>
+            </div>
+        </a>
+
+        <a class="howToContentItem" onclick="jumpToSecond(3)">
+            <div class="howToContentImg">
+                <img src="https://www.wemore.in/images/blog/8.webp">
+            </div>
+            <div class="howToContentBox">
+                <div class="howToContentText textEllipsis">
+                    Check your eligibility score to resell with wemore - the reselling app
+                </div>
+                <div class="howToContentSubtext textEllipsis">Jan 07,2020</div>
+            </div>
+        </a>
+
+
+        <a class="howToContentItem" onclick="jumpToSecond(2)">
+            <div class="howToContentImg">
+                <img src="https://www.wemore.in/images/blog/3.webp">
+            </div>
+            <div class="howToContentBox">
+                <div class="howToContentText textEllipsis">
+                    Earn Up to Rs.30,000/ Month Using wemore - Reselling App!
+                </div>
+                <div class="howToContentSubtext textEllipsis">Jan 03, 2020</div>
+            </div>
+        </a>
+
+
+        <a class="howToContentItem" onclick="jumpToSecond(1)">
+            <div class="howToContentImg">
+                <img src="https://www.wemore.in/images/blog/1.webp">
+            </div>
+            <div class="howToContentBox">
+                <div class="howToContentText textEllipsis">
+                    Be Your Own Boss by Reselling Via wemore - the Reselling App!
+                </div>
+                <div class="howToContentSubtext textEllipsis">Jan 02, 2020</div>
+            </div>
+        </a>
+
+    </div>
+
+</div>
+<script type="application/javascript" src="./loading/loading.js"></script>
+
+<script>
+    window.onload= function () {
+        document.querySelector('#loading').style.display = 'none'
+        document.querySelector('#afterLoading').style.display = 'block'
+        refresh()
+        clickTab()
+        // console.log(localStorage.getItem('activeIndex'))
+        // if (localStorage.getItem('activeIndex') === '2') {
+        //     document.querySelector('#tabItem2').classList.add('ActiveTabItem')
+        //     document.querySelector('#tabItem1').classList.remove('ActiveTabItem')
+        //     document.querySelector('#tabItem3').classList.remove('ActiveTabItem')
+        //
+        //     document.querySelector('.howToContentList').style.display = 'block'
+        //     document.querySelector('.video-box').style.display = 'none'
+        //     document.querySelector('.blogs-box').style.display = 'none'
+        //
+        // } else if (localStorage.getItem('activeIndex') === '3') {
+        //     document.querySelector('#tabItem3').classList.add('ActiveTabItem')
+        //     document.querySelector('#tabItem1').classList.remove('ActiveTabItem')
+        //     document.querySelector('#tabItem2').classList.remove('ActiveTabItem')
+        //
+        //     document.querySelector('.blogs-box').style.display = 'block'
+        //     document.querySelector('.video-box').style.display = 'none'
+        //     document.querySelector('.howToContentList').style.display = 'none'
+        //
+        // }
+        // document.querySelector('#tabItem1').onclick = function (v) {
+        //     console.log(v.target)
+        //     v.target.classList.add('ActiveTabItem')
+        //     document.querySelector('#tabItem2').classList.remove('ActiveTabItem')
+        //     document.querySelector('#tabItem3').classList.remove('ActiveTabItem')
+        //
+        //     document.querySelector('.video-box').style.display = 'block'
+        //     document.querySelector('.howToContentList').style.display = 'none'
+        //     document.querySelector('.blogs-box').style.display = 'none'
+        //
+        //     localStorage.setItem('activeIndex','1')
+        // }
+        // document.querySelector('#tabItem2').onclick = function (v) {
+        //     // console.log(v.target)
+        //     document.querySelector('#tabItem2').classList.add('ActiveTabItem')
+        //     document.querySelector('#tabItem1').classList.remove('ActiveTabItem')
+        //     document.querySelector('#tabItem3').classList.remove('ActiveTabItem')
+        //
+        //     document.querySelector('.howToContentList').style.display = 'block'
+        //     document.querySelector('.video-box').style.display = 'none'
+        //     document.querySelector('.blogs-box').style.display = 'none'
+        //
+        //     localStorage.setItem('activeIndex','2')
+        //     pauseVideo()
+        // }
+        // document.querySelector('#tabItem3').onclick = function (v) {
+        //     // console.log(v.target)
+        //     document.querySelector('#tabItem3').classList.add('ActiveTabItem')
+        //     document.querySelector('#tabItem1').classList.remove('ActiveTabItem')
+        //     document.querySelector('#tabItem2').classList.remove('ActiveTabItem')
+        //
+        //     document.querySelector('.blogs-box').style.display = 'block'
+        //     document.querySelector('.video-box').style.display = 'none'
+        //     document.querySelector('.howToContentList').style.display = 'none'
+        //
+        //     localStorage.setItem('activeIndex','3')
+        //     pauseVideo()
+        // }
+    }
+    function jumpToSecond(page) {
+        console.log(page)
+        console.log(window.location)
+        window.location.href = `https://www.wemore.in/blog${page}.html#`
+    }
+
+</script>
+</body>
+</html>

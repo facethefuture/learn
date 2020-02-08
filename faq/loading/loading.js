@@ -104,3 +104,23 @@ function refresh (){
 
     }
 }
+function clickTab() {
+    document.querySelector('#tabItem1').onclick = function (v) {
+        console.log(window.location)
+        console.log(`${window.location.origin}${window.location.pathname}`)
+        window.location.href = window.location.origin + '/faq/index.html'
+
+    }
+    document.querySelector('#tabItem2').onclick = function (v) {
+        console.log(window.location)
+        console.log(`${window.location.origin}${window.location.pathname}`)
+        window.location.href = window.location.origin + '/faq/index2.html'
+
+    }
+    document.querySelector('#tabItem3').onclick = function (v) {
+        console.log(window.location)
+        console.log(`${window.location.origin}${window.location.pathname}`)
+        window.location.href = window.location.origin + '/faq/index3.html'
+
+    }
+}
