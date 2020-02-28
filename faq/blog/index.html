@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0,user-scalable=no">
+    <title>Title</title>
+</head>
+<style>
+    html,body{
+        height: 100%;
+        margin: 0;
+    }
+    iframe{
+        width: 100%;
+    }
+    .back{
+        margin: 8px;
+    }
+    .back img{
+        height: 32px;
+        width: 32px;
+    }
+</style>
+<body>
+<a class="back"><img onclick="goBackOne()" src="./back.png"> </a>
+<!--<iframe src="https://www.wemore.in/blog1.html" frameborder="0" height="100%">-->
+
+</iframe>
+</body>
+<script>
+    window.onload = function () {
+        let element = document.createElement('iframe')
+        console.log(window.location)
+        let page = window.location.search.slice(1).split('=')[1]
+        element.src = `https://www.wemore.in/blog${page}.html`
+        element.setAttribute('frameborder','0')
+        element.height = '100%'
+        document.body.appendChild(element)
+    }
+    function goBackOne () {
+        // this.$router.go(-1)
+        console.log(1)
+        window.history.back()
+
+    }
+</script>
+</html>
