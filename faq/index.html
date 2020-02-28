@@ -276,7 +276,58 @@
                     </video>
                 </div>
             </div>
+            <div class="video-item">
+                <div class="video-item-title">
+                    How to Create WhatsApp Group ?
+                </div>
+                <!--<div class="video-item-description">-->
+                <!--After completing every order,user will ask to review the product in these -->
+                <!--</div>-->
+                <div class="video-item-play">
+                    <video src="./video/video8.mp4" id="video-8" onplay="playVideo(8)" poster="./video/video8.jpg"  controls>
 
+                    </video>
+                </div>
+            </div>
+            <div class="video-item">
+                <div class="video-item-title">
+                    How to Share Products on Facebook Page ?
+                </div>
+                <!--<div class="video-item-description">-->
+                <!--After completing every order,user will ask to review the product in these -->
+                <!--</div>-->
+                <div class="video-item-play">
+                    <video src="./video/video9.mp4" id="video-9" onplay="playVideo(9)" poster="./video/video9.jpg"  controls>
+
+                    </video>
+                </div>
+            </div>
+            <div class="video-item">
+                <div class="video-item-title">
+                    How to Share Products on Facebook Wall?
+                </div>
+                <!--<div class="video-item-description">-->
+                <!--After completing every order,user will ask to review the product in these -->
+                <!--</div>-->
+                <div class="video-item-play">
+                    <video src="./video/video10.mp4" id="video-10" onplay="playVideo(10)" poster="./video/video10.jpg"  controls>
+
+                    </video>
+                </div>
+            </div>
+            <div class="video-item">
+                <div class="video-item-title">
+                    How to Create a Facebook Page ?
+                </div>
+                <!--<div class="video-item-description">-->
+                <!--After completing every order,user will ask to review the product in these -->
+                <!--</div>-->
+                <div class="video-item-play">
+                    <video src="./video/video11.mp4" id="video-11" onplay="playVideo(11)" poster="./video/video11.jpg"  controls>
+
+                    </video>
+                </div>
+            </div>
 
         </div>
 
@@ -611,7 +662,7 @@
         window.location.href = `${window.location.origin}${window.location.pathname}list/index.html?page=${page}`
     }
     function playVideo(index) {
-        for(let i=1;i<8;i++){
+        for(let i=1;i<12;i++){
             console.log(index,i)
             if (i !== index) {
                 console.log(                document.querySelector(`#video-${i}`)
@@ -621,7 +672,7 @@
         }
     }
     function pauseVideo(){
-        for(let i=1;i<8;i++){
+        for(let i=1;i<12;i++){
             document.querySelector(`#video-${i}`).pause()
 
         }
